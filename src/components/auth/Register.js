@@ -19,8 +19,11 @@ const Register= ({errors, touched, status}) => {
     <>
       <h2>Sign-Up!</h2>
         <Form>
+          {touched.name && errors.name && <p className='error'>{errors.name}</p>}
           <Field type='text' name='name' placeholder='Name' />
+          {touched.password && errors.password && <p className='error'>{errors.password}</p>}
           <Field type='password' name='password' placeholder='Password'/>
+          {touched.email && errors.email && <p className='error'>{errors.email}</p>}
           <Field type='text' name='email' placeholder='E-mail'/>
           <button type='submit' name='submit'>Submit</button>
         </Form>
