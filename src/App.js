@@ -5,7 +5,6 @@ import { Switch, Route } from "react-router";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import styled from 'styled-components'
-import RestCard from "./components/restaurants/RestCard";
 
 const A = styled.a`
   padding: 20px;
