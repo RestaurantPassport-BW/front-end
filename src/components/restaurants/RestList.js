@@ -13,7 +13,7 @@ function RestList(props) {
             newRestaurant(res.data)
         })
         .catch(err => console.log(err))
-    })
+    }, [])
 
 
     return (
