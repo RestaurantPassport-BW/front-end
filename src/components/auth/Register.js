@@ -29,6 +29,7 @@ const Register= ({errors, touched, status}) => {
         </Form>
         <a href='/'>Take me back!</a>
 
+      {/* REMOVE MAP WHEN FINISHED */}
         {users.map((users, index) => (
             <div key={index}>
                 Name: {users.name}<br />
