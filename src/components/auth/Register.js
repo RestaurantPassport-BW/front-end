@@ -68,11 +68,12 @@ export default withFormik({
     city: yup.string().required('Please Select your city for your first passport')
   }),
 
-  handleSubmit:(values, { setStatus }) => {
+  handleSubmit:(values, { setStatus, resetForm }) => {
     axios.post('https://reqres.in/api/users', values)
     .then(res => {
       console.log(res)
       setStatus(res.data)
+      resetForm()
     })
     .catch(err => {
       console.log(err)
