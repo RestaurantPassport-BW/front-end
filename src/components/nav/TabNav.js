@@ -16,7 +16,7 @@ function TabNav() {
                 </NavItem>
                 <NavItem className="addPage">
                     <NavLink href="#" className="addPageBtn">
-                    <span>&#43;</span>
+                    <span>&oplus;</span>
                     </NavLink>
                 </NavItem>
             </Nav>
