@@ -19,8 +19,6 @@ function TabNav() {
                     <span>&#43;</span>
                     </NavLink>
                 </NavItem>
-
-
             </Nav>
         </div>
     )
