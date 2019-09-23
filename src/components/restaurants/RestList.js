@@ -15,7 +15,6 @@ function RestList(props) {
         .catch(err => console.log(err))
     }, [])
 
-
     return (
         <div className='restaurant-list grid-view'>
             {restaurant.map((rest, index) => (

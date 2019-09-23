@@ -6,6 +6,7 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import styled from 'styled-components'
 
+
 const A = styled.a`
   padding: 20px;
 `
@@ -21,7 +22,6 @@ function App() {
         <Route path={"/login"} component={Login} />
         <Route path={"/register"} component={Register} />
       </Switch>
-
     </div>
   );
 }
