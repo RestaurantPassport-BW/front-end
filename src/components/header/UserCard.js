@@ -1,5 +1,5 @@
 import React from 'react'
-
+import EditUserCard from "./EditUserCard";
 
 function UserCard() {
     return (
@@ -13,6 +13,7 @@ function UserCard() {
             </header>
             <h2>User Name</h2>
             <p>45 Check-Ins | 3 Passports</p>
+            <EditUserCard/>
         </main>
     )
 }

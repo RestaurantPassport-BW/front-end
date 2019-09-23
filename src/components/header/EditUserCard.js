@@ -9,7 +9,7 @@ const handleShow = () => setShow(true);
 
     return (
         <div>
-            <Button variant="link" onClick={handleShow}>
+            <Button variant="link" size="sm" onClick={handleShow}>
             Edit Photo
             </Button>
 
@@ -18,7 +18,9 @@ const handleShow = () => setShow(true);
                     <Modal.Title>Choose A New File</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <input type="file"/>
+                    <form>
+                        <input type="file" accept="image/*"/>
+                    </form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="link" onClick={handleClose}>Close</Button>

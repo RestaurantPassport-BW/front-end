@@ -5,14 +5,13 @@ import { Switch, Route } from "react-router";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import styled from 'styled-components'
-import EditUserCard from './components/header/EditUserCard';
+
 
 const A = styled.a`
   padding: 20px;
 `
 function App() {
   return (
-    <>
     <div className="App">
       <Switch>
         <Route exact path='/'>
@@ -24,8 +23,6 @@ function App() {
         <Route path={"/register"} component={Register} />
       </Switch>
     </div>
-    <EditUserCard />
-    </>
   );
 }
 
