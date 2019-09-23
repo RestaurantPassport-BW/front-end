@@ -19,7 +19,7 @@ function App() {
           <A href="/login">Login</A>
           <A href="/register">Register</A>
         </Route>
-        <Route path={"/login"} component={Login} />
+        <Route path={"/login"} render={props => <Login {...props} />  } />
         <Route path={"/register"} component={Register} />
       </Switch>
     </div>

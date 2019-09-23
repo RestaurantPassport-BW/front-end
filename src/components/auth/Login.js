@@ -1,16 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { withFormik, Form, Field } from "formik";
 import * as yup from "yup";
-import axios from 'axios';
+import axiosWithAuth from '../../helpers/axiosWithAuth';
 
-const Login = ({ errors, touched, status }) => {
-    const [Users, setNewUsers] = useState([])
+const Login = ({ errors, touched, status, props }) => {
+    // const [credentials, setCredentials] = useState({
+    //     credentials: {
+    //         username: '',
+    //         password: ''
+    //     }
+    // });
 
-    useEffect(() => {
-        if (status) {
-            setNewUsers([...Users, status ])
-        }
-    }, [status])
+
+    // function handleChange(e) {
+    //     setCredentials({
+    //         credentials: {
+    //             ...credentials,
+    //             [e.EventTarget.name]: e.target.value
+    //         }
+    //     })
+    // }
+
+    // function login(e) {
+    //     e.preventDefault();
+    //     axiosWithAuth()
+    //         .post('https://mhagner-rest-pass.herokuapp.com/api/auth/login')
+    //         .then(data => {
+    //             console.log(data)
+    //             localStorage.setItem('token', JSON.stringify(data.token));
+
+    //         })
+    // }
 
     return (
       <>
@@ -22,7 +42,7 @@ const Login = ({ errors, touched, status }) => {
             {touched.password && errors.password && <p className="error">{errors.password}</p>}
             <Field type="password" name="password" placeholder="Password:" />
 
-            <button type="submit">Submit</button>
+            <button type="submit">Login</button>
         </Form>
         </>
     )
@@ -40,13 +60,15 @@ export default withFormik({
        email: yup.string().email("Please enter a valid email!").required("Email is required!"),
        password: yup.string().required("Password is required"),
     }),
-    handleSubmit: (values, {setStatus, resetForm }) => {
+    handleSubmit: ( values, {props, setStatus, resetForm }) => {
             
-      axios.post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
-      
-      .then((data) => {
+    axiosWithAuth()
+        .post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
+        .then(data => {
+        console.log(data)
         localStorage.setItem('token', JSON.stringify(data.token));
-
+        // props.history.push('/register')
+        
         resetForm();
       })
       .catch((err) => console.log(err));
