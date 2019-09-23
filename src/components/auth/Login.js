@@ -51,10 +51,11 @@ export default withFormik({
     }),
     handleSubmit: (values, {setStatus, resetForm }) => {
             
-      axios.post("https://reqres.in/api/users", values)
-      .then((res) => {
-        console.log(res)
-        setStatus(res.data);  
+      axios.post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
+      
+      .then((data) => {
+        localStorage.setItem('token', JSON.stringify(data.token));
+        
         resetForm();
       })
       .catch((err) => console.log(err));
