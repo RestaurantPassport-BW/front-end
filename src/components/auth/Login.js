@@ -1,36 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { withFormik, Form, Field } from "formik";
 import * as yup from "yup";
 import axiosWithAuth from '../../helpers/axiosWithAuth';
 
 const Login = ({ errors, touched, status, props }) => {
-    // const [credentials, setCredentials] = useState({
-    //     credentials: {
-    //         username: '',
-    //         password: ''
-    //     }
-    // });
-
-
-    // function handleChange(e) {
-    //     setCredentials({
-    //         credentials: {
-    //             ...credentials,
-    //             [e.EventTarget.name]: e.target.value
-    //         }
-    //     })
-    // }
-
-    // function login(e) {
-    //     e.preventDefault();
-    //     axiosWithAuth()
-    //         .post('https://mhagner-rest-pass.herokuapp.com/api/auth/login')
-    //         .then(data => {
-    //             console.log(data)
-    //             localStorage.setItem('token', JSON.stringify(data.token));
-
-    //         })
-    // }
 
   return (
     <>
@@ -60,7 +33,7 @@ export default withFormik({
        email: yup.string().email("Please enter a valid email!").required("Email is required!"),
        password: yup.string().required("Password is required"),
     }),
-    handleSubmit: ( values, {props, setStatus, resetForm }) => {
+    handleSubmit: ( values, {props, resetForm }) => {
             
     axiosWithAuth()
         .post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)

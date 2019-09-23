@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { withFormik, Form, Field } from "formik";
 import * as yup from "yup";
 import axios from "axios";
 // import styled from 'styled-components';
 
-const Register = ({ errors, touched, status }) => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    if (status) {
-      setUsers([...users, status]);
-    }
-  }, [status]);
+const Register = ({ errors, touched, }) => {
 
   return (
     <>
@@ -85,11 +78,12 @@ export default withFormik({
       .required("Please Select your city for your first passport")
   }),
 
-  handleSubmit: (values, { setStatus, resetForm }) => {
+  handleSubmit: (values, { props, resetForm }) => {
     axios
       .post("https://mhagner-rest-pass.herokuapp.com/api/auth/register", values)
       .then(data => {
         localStorage.setItem("token", JSON.stringify(data.token));
+        props.history.push('/login')
         resetForm();
       })
       .catch(err => {

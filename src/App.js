@@ -19,7 +19,7 @@ function App() {
           <StyledLink href="/register">Register</StyledLink>
         </Route>
         <Route path={"/login"} render={props => <Login {...props} />  } />
-        <Route path={"/register"} component={Register} />
+        <Route path={"/register"} render={props => <Register {...props} /> }/>
       </Switch>
     </div>
   );
