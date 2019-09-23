@@ -23,15 +23,6 @@ const Login = ({ errors, touched, status }) => {
             <Field type="password" name="password" placeholder="Password:" />
 
             <button type="submit">Submit</button>
-
-          {/* displaying input data to the page to show that 
-              post request is working properly */} 
-            {Users.map((user, index) => (
-              <div key={index}>
-                <div>Email: {user.email}</div>
-                <div>Password: {user.password}</div>
-              </div>
-            ))}
         </Form>
         </>
     )
@@ -55,7 +46,7 @@ export default withFormik({
       
       .then((data) => {
         localStorage.setItem('token', JSON.stringify(data.token));
-        
+
         resetForm();
       })
       .catch((err) => console.log(err));
