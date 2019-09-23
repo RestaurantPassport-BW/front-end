@@ -12,6 +12,7 @@ const A = styled.a`
 `
 function App() {
   return (
+    <>
     <div className="App">
       <Switch>
         <Route exact path='/'>
@@ -23,6 +24,8 @@ function App() {
         <Route path={"/register"} component={Register} />
       </Switch>
     </div>
+    
+    </>
   );
 }
 
