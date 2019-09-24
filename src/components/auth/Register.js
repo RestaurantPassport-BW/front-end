@@ -83,7 +83,7 @@ export default withFormik({
       .post("https://mhagner-rest-pass.herokuapp.com/api/auth/register", values)
       .then(data => {
         localStorage.setItem("token", JSON.stringify(data.token));
-        props.history.push('/login')
+        props.history.push('/dashboard')
       })
       .catch(err => {
         console.log(err);
