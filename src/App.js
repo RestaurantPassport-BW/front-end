@@ -21,7 +21,7 @@ function App() {
         </Route>
         <Route path={"/login"} render={props => <Login {...props} />  } />
         <Route path={"/register"} render={props => <Register {...props} /> }/>
-        <Route path={'/dashboard'} render={props => <Dashboard {...props}/>}/>
+        <Route path={'/dashboard'} render={props => <Dashboard {...props} />}/>
       </Switch>
       
     </div>
