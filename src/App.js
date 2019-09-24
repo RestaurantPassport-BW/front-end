@@ -10,12 +10,12 @@ import Dashboard from "./components/dashboard";
 const StyledLink = styled.a`
   padding: 20px;
 `;
+
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <h1>HomePage</h1>
           <StyledLink href="/login">Login</StyledLink>
           <StyledLink href="/register">Register</StyledLink>
         </Route>

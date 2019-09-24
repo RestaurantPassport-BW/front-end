@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
-// import axios from "axios";
+import axios from "axios";
 import RestCard from './RestCard'
-// import styled from 'styled-components'
+import styled from 'styled-components'
+
+const Div = styled.div`
+    margin: 15px auto;
+`
 
 
 function RestList(props) {
@@ -97,17 +101,17 @@ function RestList(props) {
     }
 ])
 
-    // useEffect(() => {
-    //     axios
-    //     .get()
-    //     .then(res => {
-    //         newRestaurant(res.data)
-    //     })
-    //     .catch(err => console.log(err))
-    // }, [])
+    useEffect(() => {
+        axios
+        .get()
+        .then(res => {
+            newRestaurant(res.data)
+        })
+        .catch(err => console.log(err))
+    }, [])
 
     return (
-        <div className='restaurant-list grid-view'>
+        <Div className='restaurant-list grid-view'>
             {restaurant.map((rest, index) => (
                 <RestCard 
                     key={index}
@@ -121,7 +125,7 @@ function RestList(props) {
                 />
 
             ))}
-        </div>
+        </Div>
     )
 }
 
