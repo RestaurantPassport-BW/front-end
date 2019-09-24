@@ -2,14 +2,32 @@ import React from 'react'
 import RestList from './restaurants/RestList'
 import TabNav from './nav/TabNav'
 import Header from './header/Header'
+import styled from 'styled-components'
+import { Route } from 'react-router'
+import Home from './Home'
+
+
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+`
+const Div = styled.div`
+  display: flex;
+`
+
+
 
 function Dashboard() {
   return (
-    <div>
-      <TabNav />
+     <Div>
       <Header />
-      <RestList />
-    </div>
+        <Section>
+          <TabNav />
+          <Route exact strict path={'/dashboard'} render={() => <Home />}/>
+          <Route path={'/dashboard/austin'} render={() => <RestList />}/>
+        </Section>
+      </Div>    
   )
 }
 

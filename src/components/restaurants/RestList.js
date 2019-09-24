@@ -1,13 +1,12 @@
-
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import RestCard from './RestCard'
 import styled from 'styled-components'
 
 const Div = styled.div`
-    display: flex;
-    margin: 0 auto;
+    margin: 15px auto;
 `
+
 
 function RestList(props) {
     const [restaurant, newRestaurant] = useState([	{
@@ -90,16 +89,26 @@ function RestList(props) {
 		'address' : '123 whatever ln',
 		'week' : '10am-2am',
 		'weekend' : '2pm-4am'
-	}])
+    },
+    {
+		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
+		'name' : 'Jacobs',
+		'cuisine' : 'All-types', 
+		'phone' : '555-555-0123',
+		'address' : '123 whatever ln',
+		'week' : '10am-2am',
+		'weekend' : '2pm-4am'
+    }
+])
 
-    // useEffect(() => {
-    //     axios
-    //     .get()
-    //     .then(res => {
-    //         newRestaurant(res.data)
-    //     })
-    //     .catch(err => console.log(err))
-    // }, [])
+    useEffect(() => {
+        axios
+        .get()
+        .then(res => {
+            newRestaurant(res.data)
+        })
+        .catch(err => console.log(err))
+    }, [])
 
     return (
         <Div className='restaurant-list grid-view'>
