@@ -7,6 +7,7 @@ import Register from "./components/auth/Register";
 import styled from "styled-components";
 import Dashboard from "./components/dashboard";
 
+
 const StyledLink = styled.a`
   padding: 20px;
 `;
