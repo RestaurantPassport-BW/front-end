@@ -33,16 +33,14 @@ export default withFormik({
        email: yup.string().email("Please enter a valid email!").required("Email is required!"),
        password: yup.string().required("Password is required"),
     }),
-    handleSubmit: ( values, {props}) => {
+    handleSubmit: ( values, { props }) => {
             
     axiosWithAuth()
         .post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
         .then(data => {
-        console.log(data)
         localStorage.setItem('token', JSON.stringify(data.token));
         props.history.push('/dashboard')
-        
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err.message));
   }
 })(Login);
