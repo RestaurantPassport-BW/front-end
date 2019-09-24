@@ -23,3 +23,7 @@ main {
 .show {
   display: block;
 }
+
+.logoutBtn{
+  display: flex;
+}
