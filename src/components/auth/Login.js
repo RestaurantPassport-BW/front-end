@@ -3,7 +3,7 @@ import { withFormik, Form, Field } from "formik";
 import * as yup from "yup";
 import axiosWithAuth from '../../helpers/axiosWithAuth';
 
-const Login = ({ errors, touched, status, props }) => {
+const Login = ({ errors, touched }) => {
 
   return (
     <>
@@ -33,7 +33,7 @@ export default withFormik({
        email: yup.string().email("Please enter a valid email!").required("Email is required!"),
        password: yup.string().required("Password is required"),
     }),
-    handleSubmit: ( values, {props, resetForm }) => {
+    handleSubmit: ( values, {props}) => {
             
     axiosWithAuth()
         .post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
@@ -42,7 +42,6 @@ export default withFormik({
         localStorage.setItem('token', JSON.stringify(data.token));
         props.history.push('/register')
         
-        resetForm();
       })
       .catch(err => console.log(err));
   }

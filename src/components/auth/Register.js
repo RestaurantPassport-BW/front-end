@@ -4,7 +4,7 @@ import * as yup from "yup";
 import axios from "axios";
 // import styled from 'styled-components';
 
-const Register = ({ errors, touched, }) => {
+const Register = ({ errors, touched }) => {
 
   return (
     <>
@@ -78,13 +78,12 @@ export default withFormik({
       .required("Please Select your city for your first passport")
   }),
 
-  handleSubmit: (values, { props, resetForm }) => {
+  handleSubmit: (values, { props }) => {
     axios
       .post("https://mhagner-rest-pass.herokuapp.com/api/auth/register", values)
       .then(data => {
         localStorage.setItem("token", JSON.stringify(data.token));
         props.history.push('/login')
-        resetForm();
       })
       .catch(err => {
         console.log(err);
