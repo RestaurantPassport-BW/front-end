@@ -40,7 +40,7 @@ export default withFormik({
         .then(data => {
         console.log(data)
         localStorage.setItem('token', JSON.stringify(data.token));
-        props.history.push('/register')
+        props.history.push('/dashboard')
         
       })
       .catch(err => console.log(err));

@@ -1,11 +1,20 @@
 import React from 'react'
+import styled from 'styled-components'
+const Div = styled.div`
+    margin: 5px;
+    width: 400px;
+    height: 400px;
+`
+const Img = styled.img`
+    height: 30%;
+`
 
 function RestCard(props) {
     return (
-        <div className='restCard'>
-            <img src={props.image}/>
+        <Div className='restCard'>
+            <Img src={props.image}/>
             <h1>{props.name}</h1>
-            <p>{props.cuisine}</p>
+            <p>Cuisine: {props.cuisine}</p>
             <div>
                 <p>{props.phone}</p>
                 <p>{props.address}</p>
@@ -16,7 +25,7 @@ function RestCard(props) {
                 <p>Sat-Sun: {props.weekend}</p>
             </div>
             <button>Check In</button>
-        </div>
+        </Div>
     )
 }
 
