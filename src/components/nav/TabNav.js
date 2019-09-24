@@ -6,7 +6,7 @@ function TabNav() {
         <div>
             <Nav tabs>
                 <NavItem>
-                    <NavLink href="#" exact activeClassName="selected">Austin</NavLink>
+                    <NavLink href="#" activeclassname="selected">Austin</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink href="#">San Francisco</NavLink>

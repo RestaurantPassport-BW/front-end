@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+
+const Img = styled.img`
+    width: 75%;
+`
+
 const Div = styled.div`
     margin: 5px;
-    width: 400px;
-    height: 400px;
-`
-const Img = styled.img`
-    height: 30%;
+    width: 45%;
+    height: 70%;
+    border: 1px solid black;
+    padding: 25px;
 `
 
 function RestCard(props) {
