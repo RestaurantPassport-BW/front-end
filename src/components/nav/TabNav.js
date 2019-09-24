@@ -1,18 +1,23 @@
 import React from 'react'
 import { Nav, NavItem, NavLink } from 'reactstrap';
+import styled from 'styled-components'
+
+const Div = styled.div`
+    width: 850px;
+`
 
 function TabNav() {
     return (
-        <div>
+        <Div>
             <Nav tabs>
                 <NavItem>
-                    <NavLink href="#" activeclassname="selected">Austin</NavLink>
+                    <NavLink href="/dashboard/austin" activeclassname="selected">Austin</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#" disabled >San Francisco *coming soon</NavLink>
+                    <NavLink href="#" disabled >San Francisco *Coming Soon*</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#" disabled >Denver *coming soon</NavLink>
+                    <NavLink href="#" disabled >Denver *Coming Soon*</NavLink>
                 </NavItem>
                 <NavItem className="addPage">
                     <NavLink href="#" className="addPageBtn">
@@ -20,7 +25,7 @@ function TabNav() {
                     </NavLink>
                 </NavItem>
             </Nav>
-        </div>
+        </Div>
     )
 }
 

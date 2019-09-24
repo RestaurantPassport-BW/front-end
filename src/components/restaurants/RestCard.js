@@ -6,9 +6,8 @@ const SImg = styled.img`
 `
 
 const SDiv = styled.div`
-    margin: 5px;
+    margin: 10px 2.5px;
     width: 45%;
-    height: 70%;
     border: 1px solid black;
     border-radius: 25px;
     padding: 25px;

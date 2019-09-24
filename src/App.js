@@ -6,15 +6,21 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import styled from "styled-components";
 import Dashboard from "./components/dashboard";
+import RestList from "./components/restaurants/RestList";
+
 
 
 const StyledLink = styled.a`
   padding: 20px;
 `;
 
+const Div = styled.div`
+  margin: 2%;
+`
+
 function App() {
   return (
-    <div className="App">
+    <Div className="App">
       <Switch>
         <Route exact path="/">
           <StyledLink href="/login">Login</StyledLink>
@@ -25,7 +31,7 @@ function App() {
         <Route path={'/dashboard'} render={props => <Dashboard {...props} />}/>
       </Switch>
       
-    </div>
+    </Div>
   );
 }
 
