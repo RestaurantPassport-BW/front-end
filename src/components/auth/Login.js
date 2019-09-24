@@ -2,22 +2,37 @@ import React from 'react';
 import { withFormik, Form, Field } from "formik";
 import * as yup from "yup";
 import axiosWithAuth from '../../helpers/axiosWithAuth';
+import {Card, Button} from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 const Login = ({ errors, touched }) => {
 
   return (
     <>
-      <h1>Login</h1>
-        <Form>
-            {touched.email && errors.email && <p className="error">{errors.email}</p>}
-            <Field type="email" name="email" placeholder="Email:" />
+      <main>
+            <Card className="text-center">
+                <Card.Header>
 
-            {touched.password && errors.password && <p className="error">{errors.password}</p>}
-            <Field type="password" name="password" placeholder="Password:" />
-
-            <button type="submit">Login</button>
-        </Form>
-        </>
+                <h1><span role='img' aria-label='breifcase'>&#128188;</span>Restaurant Passport</h1>
+                </Card.Header>
+                <Card.Body>
+                    <Card.Title>Please log in with your email and password</Card.Title>
+                    <Card.Text>
+                        <Form className="loginForm">
+                            {touched.email && errors.email && <p className="error">{errors.email}</p>}
+                            <Field type="email" name="email" placeholder="Email:" className="input" />
+                            {touched.password && errors.password && <p className="error">{errors.password}</p>}
+                            <Field type="password" name="password" placeholder="Password:" className="input" />
+                            <Button type="submit" variant="secondary">Login</Button>
+                        </Form>
+                    </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-muted">
+                    You must register first if you haven't already in order to login <Link to="/register">Register</Link>
+                    </Card.Footer>
+            </Card>
+        </main> 
+    </>
     )
 }
 
@@ -37,7 +52,7 @@ export default withFormik({
             
     axiosWithAuth()
         .post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
-        .then(data => {
+        .then(data => {  
         localStorage.setItem('token', JSON.stringify(data.token));
         props.history.push('/dashboard')
       })
