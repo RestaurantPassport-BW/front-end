@@ -19,16 +19,16 @@ function RestCard(props) {
             <Img src={props.image}/>
             <h1>{props.name}</h1>
             <p>Cuisine: {props.cuisine}</p>
-            <div>
+            <div className='hidden'>
                 <p>{props.phone}</p>
                 <p>{props.address}</p>
             </div>
-            <div>
+            <div className='hidden'>
                 <h2>Hours:</h2>
                 <p>Mon-Fri: {props.week}</p>
                 <p>Sat-Sun: {props.weekend}</p>
             </div>
-            <button>Check In</button>
+            <button className='hidden'>Check In</button>
         </Div>
     )
 }
