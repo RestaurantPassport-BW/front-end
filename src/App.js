@@ -5,7 +5,7 @@ import { Switch, Route } from "react-router";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import styled from "styled-components";
-
+import UserCard from './components/header/UserCard'
 
 const StyledLink = styled.a`
   padding: 20px;
@@ -22,6 +22,7 @@ function App() {
         <Route path={"/login"} render={props => <Login {...props} />  } />
         <Route path={"/register"} render={props => <Register {...props} /> }/>
       </Switch>
+      <UserCard />
     </div>
   );
 }
