@@ -1,14 +1,10 @@
 import React from 'react'
 import { Nav, NavItem, NavLink } from 'reactstrap';
-import styled from 'styled-components'
 
-const Div = styled.div`
-    width: 850px;
-`
 
 function TabNav() {
     return (
-        <Div>
+        <div>
             <Nav tabs>
                 <NavItem>
                     <NavLink href="/dashboard/austin" activeclassname="selected">Austin</NavLink>
@@ -25,7 +21,7 @@ function TabNav() {
                     </NavLink>
                 </NavItem>
             </Nav>
-        </Div>
+        </div>
     )
 }
 

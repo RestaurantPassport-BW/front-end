@@ -6,7 +6,6 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import styled from "styled-components";
 import Dashboard from "./components/dashboard";
-import RestList from "./components/restaurants/RestList";
 
 
 
