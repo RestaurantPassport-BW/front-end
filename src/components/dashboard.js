@@ -14,6 +14,11 @@ const Section = styled.section`
   flex-direction: column;
   width: 100%;
   margin-right: 54px;
+  width: 600px;
+  height: autopx;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #f7f7f7;
 `
 const Div = styled.div`
   display: flex;
@@ -30,6 +35,7 @@ function Dashboard() {
       <Header />
         <Section>
           <TabNav />
+          <img className="cityImage" src="../img/downtown-austin.jpg" alt="downtown austin"/>
           <Route exact strict path={'/dashboard'} render={() => <Home />}/>
           <Route path={'/dashboard/austin'} render={() => <RestList />}/>
         </Section>

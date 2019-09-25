@@ -5,7 +5,7 @@ import { Icon } from 'semantic-ui-react';
 function Filter() {
     return (
         <>
-            <Form>
+            <Form className="filter">
                 <FormGroup>
                     <Icon name="food" /><Label for="CuisineCheckbox">Cuisine</Label>
                     <div>
@@ -20,7 +20,7 @@ function Filter() {
                     </div>
                 </FormGroup>
             </Form>
-            <Form>
+            {/* <Form>
                 <FormGroup>
                     <Icon name="clock"/><Label for="PeriodCheckbox">Period</Label>
                     <div>
@@ -31,7 +31,7 @@ function Filter() {
                         <CustomInput type="checkbox" id="Checkbox13" label="Dessert" />
                     </div>
                 </FormGroup>
-            </Form>
+            </Form> */}
 
         </>
     )
