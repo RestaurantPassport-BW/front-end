@@ -1,12 +1,12 @@
 import React from 'react'
-import { Nav, NavItem } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 
 
 function TabNav() {
     return (
         <div>
-            <Nav tabs className="navTab">
+            <Nav tabs="true" className="navTab">
                 
                 <NavLink className='link' 
                 to="/dashboard/austin" 
