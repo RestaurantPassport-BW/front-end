@@ -1,6 +1,7 @@
 import React from 'react'
-// import EditUserCard from "./EditUserCard";
-import { Button } from "react-bootstrap"
+import EditUserCard from "./EditUserCard";
+import { Dropdown } from "react-bootstrap"
+import { Icon } from 'semantic-ui-react'
 
 function UserCard() {
 
@@ -11,16 +12,27 @@ function UserCard() {
     return (
         <>
         <main className="userCard">
-            <Button variant="link" color='violet' size="sm" onClick={logOut} className="logoutBtn" type="submit">| &#8592;</Button>
-            <section>
-                <img className="userCardImg" 
-                src="https://via.placeholder.com/140"
-                alt="placeholder" 
-                />
-            </section>
-            <p className="userName">{localStorage.getItem('user')}</p>
-            <p>45 Check-Ins | 3 Passports</p>
-            {/* <EditUserCard/> */}
+        <Dropdown>
+            <Dropdown.Toggle className="logoutBtn" as="button" id="dropdown-basic">
+            <Icon name="cog" size="large"/>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+                <Dropdown.Item><EditUserCard/></Dropdown.Item>
+                <Dropdown.Item  
+                onClick={logOut}>
+                | &#8592; Logout
+                </Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+
+            <img className="userCardImg" 
+            src="https://via.placeholder.com/140"
+            alt="placeholder" 
+            />
+        
+            <div className="userName">{localStorage.getItem('user')}</div>
+            <span>45 Check-Ins | 3 Passports</span>
         </main>
         </>
     )

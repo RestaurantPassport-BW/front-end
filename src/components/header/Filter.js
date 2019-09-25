@@ -7,8 +7,8 @@ function Filter() {
         <>
             <Form className="filter">
                 <FormGroup>
-                    <Icon name="food" /><Label for="CuisineCheckbox">Cuisine</Label>
-                    <div>
+                    <Icon name="food" className="filterIcon" /><Label className="filterLabel"for="CuisineCheckbox">Cuisine</Label>
+                    <div className="filterList">
                         <CustomInput type="checkbox" id="Checkbox" label="Tex-Mex" />
                         <CustomInput type="checkbox" id="Checkbox2" label="Authentic Mexican" />
                         <CustomInput type="checkbox" id="Checkbox3" label="American" />

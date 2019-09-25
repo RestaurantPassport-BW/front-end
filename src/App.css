@@ -58,6 +58,8 @@ main {
 .logoutBtn{
   display: flex;
   color: #6610f2;
+  border: none;
+  text-decoration: none;
 }
 .loginForm{
   display: flex;
@@ -132,9 +134,9 @@ main {
   border-radius: 50%
 }
 .userName{
-  width: 142px;
-  height: 28px;
-  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: auto;
+  font-family: Lato, sans serif;
   font-size: 23px;
   font-weight: bold;
   font-style: normal;
@@ -142,13 +144,29 @@ main {
   line-height: normal;
   letter-spacing: normal;
   color: #333333;
-  margin-left: 23%;
+  text-align: center;
 
+}
+.filterList{
+  text-align: left;
+  margin-left: 228px;
 }
 .filter{
-  margin-left: 255px;
+  margin-left: 47px;
 }
-
+.filterLabel{
+  font-family: Lato;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
+}
+.filterIcon{
+  margin-left: 265px;
+}
 .grid-view {
   display: flex;
   flex-wrap: wrap;
