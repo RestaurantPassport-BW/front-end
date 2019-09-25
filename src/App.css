@@ -87,3 +87,28 @@ main {
   height: 143px;
   background-color: rgba(0, 0, 0, 0.27);
 }
+.userCard{
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  
+}
+.userCardImg{
+  margin-bottom: 10px;
+}
+.userName{
+  width: 142px;
+  height: 28px;
+  font-family: Lato;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
+  margin-left: 23%;
+
+}

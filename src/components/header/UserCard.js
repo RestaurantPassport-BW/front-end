@@ -10,19 +10,17 @@ function UserCard() {
   };
     return (
         <>
-        <main>
+        <main className="userCard">
             <Button variant="link" size="sm" onClick={logOut} className="logoutBtn" type="submit">| &#8592;</Button>
-            <header>
-                <img 
-                className="userCardImg"
-                src="https://via.placeholder.com/150"
+            <section>
+                <img className="userCardImg" 
+                src="https://via.placeholder.com/140"
                 alt="placeholder" 
                 />
-            </header>
-            
-            <h2>{localStorage.getItem('user')}</h2>
+            </section>
+            <p className="userName">{localStorage.getItem('user')}</p>
             <p>45 Check-Ins | 3 Passports</p>
-            <EditUserCard/>
+            {/* <EditUserCard/> */}
         </main>
         </>
     )
