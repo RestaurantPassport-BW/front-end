@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+
 }
 
 .addPage {
-  margin-left: 33%;
+  margin-left: 0%;
 }
 
 main {
@@ -43,4 +44,9 @@ main {
 }
 .cardTitle{
   margin-bottom: 30px;
+}
+.navTab{
+  width: 600px;
+  height: 54px;
+  background-color: #ffffff
 }

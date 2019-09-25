@@ -13,9 +13,13 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-right: 54px;
 `
 const Div = styled.div`
   display: flex;
+  width: 1440px;
+  height: 1024px;
+  background-color: #f0f0f0;
 `
 
 

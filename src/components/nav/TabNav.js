@@ -5,7 +5,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 function TabNav() {
     return (
         <div>
-            <Nav tabs>
+            <Nav tabs className="navTab">
                 <NavItem>
                     <NavLink href="/dashboard/austin" activeclassname="selected">Austin</NavLink>
                 </NavItem>
