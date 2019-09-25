@@ -33,7 +33,6 @@ function Dashboard() {
         <Section>
           <TabNav />
           <Route exact strict path={'/dashboard'} render={() => <Home />}/>
-          <Route path={'/dashboard/'} component={Instructions} />
           <Route path={'/dashboard/austin'} render={() => <RestList />}/>
         </Section>
       </Div>    

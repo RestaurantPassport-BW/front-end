@@ -45,14 +45,16 @@ function RestCard(props) {
   const changeState = () => {
     console.log(cName);
     setCname(!cName);
+    
   };
 
-  const changeCheckin = () => {
-    setCheck(!check)
+  const changeCheckin = (e) => {
+        e.stopPropagation()
+        setCheck(!check)
   }
 
   return (
-    <SDiv className={cName ? "restCard" : "expandedCard"} >
+    <SDiv className={cName ? "restCard" : "expandedCard"} onClick={changeState} >
       <SImg src={props.image} onClick={changeState}/>
       <H1>{props.name}</H1>
       <p>Cuisine: {props.cuisine}</p>
