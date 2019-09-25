@@ -21,7 +21,7 @@ function TabNav() {
                 </NavLink>
         
                 <NavLink to="#" className="addPage">
-                <span>&oplus;</span>
+                <strong>&oplus;</strong>
                 </NavLink>
             </Nav>
         </div>
