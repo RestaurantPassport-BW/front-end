@@ -102,8 +102,8 @@ main {
   border-radius: 50%
 }
 .userName{
-  width: 142px;
-  height: 28px;
+  width: 100%;
+  height: auto;
   font-family: Lato;
   font-size: 23px;
   font-weight: bold;
@@ -112,7 +112,7 @@ main {
   line-height: normal;
   letter-spacing: normal;
   color: #333333;
-  margin-left: 23%;
+  text-align: center;
 
 }
 .filterList{

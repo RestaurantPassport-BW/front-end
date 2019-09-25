@@ -18,8 +18,8 @@ function UserCard() {
                 alt="placeholder" 
                 />
             </section>
-            <p className="userName">{localStorage.getItem('user')}</p>
-            <p>45 Check-Ins | 3 Passports</p>
+            <h2 className="userName">{localStorage.getItem('user')}</h2>
+            <span>45 Check-Ins | 3 Passports</span>
             {/* <EditUserCard/> */}
         </main>
         </>
