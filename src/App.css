@@ -28,6 +28,8 @@ main {
 .logoutBtn{
   display: flex;
   color: #6610f2;
+  border: none;
+  text-decoration: none;
 }
 .loginForm{
   display: flex;

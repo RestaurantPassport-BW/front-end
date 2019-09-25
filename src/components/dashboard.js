@@ -15,7 +15,7 @@ const Section = styled.section`
   width: 100%;
   margin-right: 54px;
   width: 600px;
-  height: autopx;
+  height: auto;
   border-radius: 5px;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
   background-color: #f7f7f7;
