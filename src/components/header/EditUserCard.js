@@ -8,7 +8,7 @@ const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
 
     return (
-        <div>
+        <>
             <Button variant="link" size="sm" onClick={handleShow}>
             Edit Photo
             </Button>
@@ -27,7 +27,7 @@ const handleShow = () => setShow(true);
                     <Button variant="link" onClick={handleClose}>Save Changes</Button>
                 </Modal.Footer>
             </Modal>
-        </div>
+        </>
     )
 }
 

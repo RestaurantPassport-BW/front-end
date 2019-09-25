@@ -16,7 +16,6 @@ const Login = ({ errors, touched }) => {
             </Card.Header>
             <Card.Body>
                 <Card.Title className="cardTitle">Please log in with your email and password</Card.Title>
-                <Card.Text>
                     <Form className="loginForm">
                         {touched.email && errors.email && <p className="error">{errors.email}</p>}
                         <Field type="email" name="email" placeholder="Email:" className="input" />
@@ -24,7 +23,6 @@ const Login = ({ errors, touched }) => {
                         <Field type="password" name="password" placeholder="Password:" className="input" />
                         <Button type="submit" variant="secondary">Login</Button>
                     </Form>
-                </Card.Text>
             </Card.Body>
             <Card.Footer className="text-muted">
             You must register first if you haven't already in order to login <Link to="/register">Register</Link>
@@ -52,11 +50,10 @@ export default withFormik({
     axiosWithAuth()
         .post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
         .then(res => { 
-        console.log(res.data) 
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', res.data.user.firstName);
         props.history.push('/dashboard')
       })
-      .catch(err => console.log(err.message));
+      .catch(err => alert(err.message));
   }
 })(Login);

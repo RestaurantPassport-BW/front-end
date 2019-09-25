@@ -16,7 +16,6 @@ const Register = ({ errors, touched }) => {
         </Card.Header>
         <Card.Body>
           <Card.Title className="cardTitle">Please sign up with your information to login</Card.Title>
-          <Card.Text>
             <Form className ="signupForm">
               {touched.firstName && errors.firstName && (
                 <p className="error">{errors.firstName}</p>
@@ -52,7 +51,6 @@ const Register = ({ errors, touched }) => {
                 Sign Up!
               </Button>
             </Form>
-          </Card.Text>
         </Card.Body>
         <Card.Footer className="text-muted"><a href="/">Take me back!</a></Card.Footer>
       </Card>
