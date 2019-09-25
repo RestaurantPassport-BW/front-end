@@ -2,50 +2,61 @@ import React from "react";
 import { withFormik, Form, Field } from "formik";
 import * as yup from "yup";
 import axios from "axios";
+import {Card, Button} from "react-bootstrap"
 // import styled from 'styled-components';
 
 const Register = ({ errors, touched }) => {
 
   return (
     <>
-      <h2>Sign-Up!</h2>
-      <Form>
-        {touched.firstName && errors.firstName && (
-          <p className="error">{errors.firstName}</p>
-        )}
-        <Field type="text" name="firstName" placeholder="First Name" />
-        {touched.lastName && errors.lastName && (
-          <p className="error">{errors.lastName}</p>
-        )}
-        <Field type="text" name="lastName" placeholder="Last Name" />
-        {touched.email && errors.email && (
-          <p className="error">{errors.email}</p>
-        )}
-        <Field type="text" name="email" placeholder="E-mail" />
-        {touched.password && errors.password && (
-          <p className="error">{errors.password}</p>
-        )}
-        <Field type="password" name="password" placeholder="Password" />
-        {}
-        <Field component="select" name="city">
-          <option value="" disabled>
-            Select City:
-          </option>
-          <option value="1">Austin TX</option>
-          <option value="2" disabled>
-            Denver CO (COMING SOON!)
-          </option>
-          <option value="3" disabled>
-            San Francisco CA (COMING SOON!)
-          </option>
-        </Field>
+    <main>
+      <Card  className='text-center'>
+        <Card.Header>
+          <h1><span role='img' aria-label='breifcase'>&#128188;</span>Restaurant Passport</h1>
+        </Card.Header>
+        <Card.Body>
+          <Card.Title className="cardTitle">Please sign up with your information to login</Card.Title>
+          <Card.Text>
+            <Form className ="signupForm">
+              {touched.firstName && errors.firstName && (
+                <p className="error">{errors.firstName}</p>
+              )}
+              <Field className="input" type="text" name="firstName" placeholder="First Name" />
+              {touched.lastName && errors.lastName && (
+                <p className="error">{errors.lastName}</p>
+              )}
+              <Field className="input" type="text" name="lastName" placeholder="Last Name" />
+              {touched.email && errors.email && (
+                <p className="error">{errors.email}</p>
+              )}
+              <Field className="input" type="text" name="email" placeholder="E-mail" />
+              {touched.password && errors.password && (
+                <p className="error">{errors.password}</p>
+              )}
+              <Field className="input" type="password" name="password" placeholder="Password" />
+              {}
+              <Field className="input" component="select" name="city">
+                <option value="" disabled>
+                  Select City:
+                </option>
+                <option value="1">Austin TX</option>
+                <option value="2" disabled>
+                  Denver CO (COMING SOON!)
+                </option>
+                <option value="3" disabled>
+                  San Francisco CA (COMING SOON!)
+                </option>
+              </Field>
 
-        <button type="submit" name="submit">
-          Submit
-        </button>
-      </Form>
-      <a href="/">Take me back!</a>
-
+              <Button variant="secondary" type="submit" name="submit">
+                Sign Up!
+              </Button>
+            </Form>
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer className="text-muted"><a href="/">Take me back!</a></Card.Footer>
+      </Card>
+    </main>            
     </>
   );
 };

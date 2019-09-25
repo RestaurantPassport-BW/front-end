@@ -15,7 +15,7 @@ const Login = ({ errors, touched }) => {
                 <h1><span role='img' aria-label='breifcase'>&#128188;</span>Restaurant Passport</h1>
             </Card.Header>
             <Card.Body>
-                <Card.Title>Please log in with your email and password</Card.Title>
+                <Card.Title className="cardTitle">Please log in with your email and password</Card.Title>
                 <Card.Text>
                     <Form className="loginForm">
                         {touched.email && errors.email && <p className="error">{errors.email}</p>}
