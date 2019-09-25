@@ -97,6 +97,7 @@ main {
 }
 .userCardImg{
   margin-bottom: 10px;
+  border-radius: 50%
 }
 .userName{
   width: 142px;
