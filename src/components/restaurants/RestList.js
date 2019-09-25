@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 // import axios from "axios";
 import RestCard from './RestCard'
 import styled from 'styled-components'
-// import RestCard from './testing'
 
 const Div = styled.div`
     margin: 15px auto;

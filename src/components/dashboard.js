@@ -5,6 +5,7 @@ import Header from './header/Header'
 import styled from 'styled-components'
 import { Route } from 'react-router'
 import Home from './Home'
+import Instructions from './instructions'
 
 
 
@@ -12,7 +13,7 @@ import Home from './Home'
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 600px;
 `
 const Div = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ function Dashboard() {
         <Section>
           <TabNav />
           <Route exact strict path={'/dashboard'} render={() => <Home />}/>
+          <Route path={'/dashboard/'} component={Instructions} />
           <Route path={'/dashboard/austin'} render={() => <RestList />}/>
         </Section>
       </Div>    
