@@ -6,7 +6,7 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import styled from "styled-components";
 import Dashboard from "./components/dashboard";
-// import PrivateRoute from "./";
+import PrivateRoute from "./helpers/PrivateRoute"
 
 
 
@@ -29,7 +29,7 @@ function App() {
         </Route>
         <Route path={"/login"} render={props => <Login {...props} />  } />
         <Route path={"/register"} render={props => <Register {...props} /> }/>
-        <Route path={'/dashboard'} render={props => <Dashboard {...props} />}/>
+        <PrivateRoute path={'/dashboard'} component={Dashboard} />}/>
       </Switch>
       
     </Div>
