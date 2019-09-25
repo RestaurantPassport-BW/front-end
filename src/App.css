@@ -24,6 +24,32 @@ main {
 .show {
   display: block;
 }
+.restCard{
+  width: 275px;
+  height: 235px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+.expandedCard {
+  width: 569px;
+  height: 505px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  order: -1;
+}
+
+.expandedCard img {
+  width: 567px;
+  height: 176px;
+  border-radius: 5px;
+}
+
+.restaurant-list {
+  width: 600px;
+}
 
 .logoutBtn{
   display: flex;
@@ -55,7 +81,7 @@ main {
 .link{
   font-family: Roboto;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -72,7 +98,7 @@ main {
   background-color: #6f52ed;
   font-family: Roboto;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
