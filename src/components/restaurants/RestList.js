@@ -112,7 +112,9 @@ function RestList(props) {
     // }, [])
 
     return (
+
         <Div className='restaurant-list grid-view' >
+			<img className="cityImage" src="../img/downtown-austin.jpg" alt="downtown austin"/>
             {restaurant.map((rest, index) => (
                 <RestCard 
                     key={index}

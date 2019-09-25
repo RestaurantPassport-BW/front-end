@@ -4,7 +4,22 @@
 }
 
 .addPage {
-  margin-left: 0%;
+  width: 90px;
+  height: 54px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6f52ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 48%;
+  text-decoration: none;
+
 }
 
 main {
@@ -27,7 +42,7 @@ main {
 
 .logoutBtn{
   display: flex;
-  color: #6610f2;
+  color: #6f52ed;
   border: none;
   text-decoration: none;
 }
@@ -55,6 +70,8 @@ main {
   
 }
 .link{
+  width: 90px;
+  height: 54px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
@@ -67,6 +84,7 @@ main {
   justify-content: center;
   align-items: center;
   margin-right: 16px;
+  text-decoration: none;
 }
 .selected{
   width: 90px;
@@ -84,6 +102,7 @@ main {
   justify-content: center;
   align-items: center;
   margin-right: 16px;
+  text-decoration: none;
 }
 .cityImage{
   width: 600px;
