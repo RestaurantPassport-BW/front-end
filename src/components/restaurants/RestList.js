@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import axios from "axios";
+import React, { useState } from 'react'
+// import axios from "axios";
 import RestCard from './RestCard'
 import styled from 'styled-components'
+// import RestCard from './testing'
 
 const Div = styled.div`
     margin: 15px auto;
@@ -9,9 +10,9 @@ const Div = styled.div`
 
 
 function RestList(props) {
-    const [restaurant, newRestaurant] = useState([	{
+    const [restaurant] = useState([	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'John',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -29,7 +30,7 @@ function RestList(props) {
 	},
 	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'Jingle',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -38,7 +39,7 @@ function RestList(props) {
 	},
 	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'Shane',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -47,7 +48,7 @@ function RestList(props) {
 	},
 	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'Derrik',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -56,7 +57,7 @@ function RestList(props) {
 	},
 	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'Kevin',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -65,7 +66,7 @@ function RestList(props) {
 	},
 	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'Matt',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -74,7 +75,7 @@ function RestList(props) {
 	},
 	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'Matthew',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -83,7 +84,7 @@ function RestList(props) {
 	},
 	{
 		'image' : 'https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg',
-		'name' : 'Jacobs',
+		'name' : 'Emil',
 		'cuisine' : 'All-types', 
 		'phone' : '555-555-0123',
 		'address' : '123 whatever ln',
@@ -101,17 +102,17 @@ function RestList(props) {
     }
 ])
 
-    useEffect(() => {
-        axios
-        .get()
-        .then(res => {
-            newRestaurant(res.data)
-        })
-        .catch(err => console.log(err))
-    }, [])
+    // useEffect(() => {
+    //     axios
+    //     .get()
+    //     .then(res => {
+    //         newRestaurant(res.data)
+    //     })
+    //     .catch(err => console.log(err))
+    // }, [])
 
     return (
-        <Div className='restaurant-list grid-view'>
+        <Div className='restaurant-list grid-view' >
             {restaurant.map((rest, index) => (
                 <RestCard 
                     key={index}

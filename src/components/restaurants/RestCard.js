@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const SImg = styled.img`
@@ -17,22 +17,31 @@ const SDiv = styled.div`
     };
 `
 
+
+
 function RestCard(props) {
+    const [cName, setCname] = useState(true)
+
+    const changeState = () => {
+        console.log(cName)
+        setCname(!cName)
+    }
+
     return (
-        <SDiv className='restCard'>
-            <SImg src={props.image}/>
+        <SDiv className='restCard' onClick={changeState}>
+            <SImg src={props.image} />
             <h1>{props.name}</h1>
             <p>Cuisine: {props.cuisine}</p>
-            <div className='hidden'>
+            <div className={cName? 'hidden' : 'show' }>
                 <p>{props.phone}</p>
                 <p>{props.address}</p>
             </div>
-            <div className='hidden'>
+            <div className={cName? 'hidden' : 'show' }>
                 <h2>Hours:</h2>
                 <p>Mon-Fri: {props.week}</p>
                 <p>Sat-Sun: {props.weekend}</p>
             </div>
-            <button className='hidden'>Check In</button>
+            <button className={cName? 'hidden' : 'show' }>Check In</button>
         </SDiv>
     )
 }
