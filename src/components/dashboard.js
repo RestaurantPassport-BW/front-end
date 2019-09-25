@@ -20,6 +20,7 @@ const Section = styled.section`
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
   background-color: #f7f7f7;
 `
+
 const Div = styled.div`
   display: flex;
   width: 1440px;

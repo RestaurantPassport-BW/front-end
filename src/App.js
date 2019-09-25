@@ -15,13 +15,9 @@ const StyledLink = styled.a`
   padding: 20px;
 `;
 
-const Div = styled.div`
-  margin: 2%;
-`
-
 function App() {
   return (
-    <Div className="App">
+    <div className="App">
       <Switch>
         <Route exact path="/">
           <StyledLink href="/login">Login</StyledLink>
@@ -32,7 +28,7 @@ function App() {
         <PrivateRoute path={'/dashboard'} component={Dashboard} />}/>
       </Switch>
       
-    </Div>
+    </div>
   );
 }
 
