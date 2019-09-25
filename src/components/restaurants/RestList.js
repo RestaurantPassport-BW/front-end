@@ -4,7 +4,7 @@ import RestCard from './RestCard'
 import styled from 'styled-components'
 
 const Div = styled.div`
-    margin: 15px auto;
+		margin: 15px auto;
 `
 
 
