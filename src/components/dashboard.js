@@ -5,7 +5,6 @@ import Header from './header/Header'
 import styled from 'styled-components'
 import { Route } from 'react-router'
 import Home from './Home'
-import Instructions from './instructions'
 
 
 
