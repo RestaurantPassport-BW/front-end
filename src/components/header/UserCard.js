@@ -5,8 +5,7 @@ import { Button } from "react-bootstrap"
 function UserCard() {
 
   const logOut = () => { 
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
+      localStorage.clear();
       window.location.reload(true)
   };
     return (
