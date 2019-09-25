@@ -115,6 +115,19 @@ main {
   margin-left: 23%;
 
 }
+.filterList{
+  
+}
 .filter{
   margin-left: 255px;
+}
+.filterLabel{
+  font-family: Lato;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
 }
