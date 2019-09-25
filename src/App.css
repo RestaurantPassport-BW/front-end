@@ -40,6 +40,64 @@ main {
   display: block;
 }
 
+.checkShow {
+  display: block;
+}
+.restCard{
+  width: 275px;
+  height: 235px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+.expandedCard {
+  width: 569px;
+  height: 505px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  /* order: -1; */
+  z-index: +1;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.expandedCardEven {
+  width: 569px;
+  height: 505px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  /* order: -1; */
+  z-index: +1;
+  /* position: absolute;
+  top: 50px;
+  left: 50px; */
+}
+.expandedCardOdd {
+  width: 569px;
+  height: 505px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  /* order: -1; */
+  z-index: +1;
+  /* position: absolute;
+  top: 50px;
+  left: 50px; */
+}
+
+.expandedCard img {
+  width: 567px;
+  height: 176px;
+  border-radius: 5px;
+}
+
+.restaurant-list {
+  width: 600px;
+}
+
 .logoutBtn{
   display: flex;
   color: #6f52ed;
@@ -70,11 +128,9 @@ main {
   
 }
 .link{
-  width: 90px;
-  height: 54px;
-  font-family: Roboto;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -90,9 +146,9 @@ main {
   width: 90px;
   height: 54px;
   background-color: #6f52ed;
-  font-family: Roboto;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -125,7 +181,7 @@ main {
 .userName{
   width: 100%;
   height: auto;
-  font-family: Lato;
+  font-family: Lato, sans serif;
   font-size: 23px;
   font-weight: bold;
   font-style: normal;
@@ -155,4 +211,9 @@ main {
 }
 .filterIcon{
   margin-left: 265px;
+}
+.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

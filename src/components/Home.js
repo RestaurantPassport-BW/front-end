@@ -9,7 +9,7 @@ const Div = styled.div`
 function Home() {
   return(
     <Div>
-      <h2>Welcome to Resturant Passport</h2>
+      <h2>Welcome to Resturant Passport!</h2>
       <p>Click Austin to see your first one!</p>
     </Div>
   )

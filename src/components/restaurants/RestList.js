@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 // import axios from "axios";
 import RestCard from './RestCard'
 import styled from 'styled-components'
-// import RestCard from './testing'
 
 const Div = styled.div`
-    margin: 15px auto;
+		margin: 15px auto;
 `
 
 
@@ -116,8 +115,10 @@ function RestList(props) {
         <Div className='restaurant-list grid-view' >
 			<img className="cityImage" src="../img/downtown-austin.jpg" alt="downtown austin"/>
             {restaurant.map((rest, index) => (
-                <RestCard 
+								<RestCard 
+										style={{border: "1px solid red"}}
                     key={index}
+                    index={index}
                     image={rest.image}
                     name={rest.name}
                     cuisine={rest.cuisine}
