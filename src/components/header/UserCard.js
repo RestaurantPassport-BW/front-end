@@ -1,5 +1,5 @@
 import React from 'react'
-import EditUserCard from "./EditUserCard";
+// import EditUserCard from "./EditUserCard";
 import { Button } from "react-bootstrap"
 
 function UserCard() {
@@ -11,7 +11,7 @@ function UserCard() {
     return (
         <>
         <main className="userCard">
-            <Button variant="link" size="sm" onClick={logOut} className="logoutBtn" type="submit">| &#8592;</Button>
+            <Button variant="link" color='violet' size="sm" onClick={logOut} className="logoutBtn" type="submit">| &#8592;</Button>
             <section>
                 <img className="userCardImg" 
                 src="https://via.placeholder.com/140"

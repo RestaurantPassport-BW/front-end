@@ -27,6 +27,7 @@ main {
 
 .logoutBtn{
   display: flex;
+  color: #6610f2;
 }
 .loginForm{
   display: flex;
@@ -93,6 +94,7 @@ main {
   border-radius: 5px;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
+  margin-left: 255px;
   
 }
 .userCardImg{
@@ -112,4 +114,7 @@ main {
   color: #333333;
   margin-left: 23%;
 
+}
+.filter{
+  margin-left: 255px;
 }
