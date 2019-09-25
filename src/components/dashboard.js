@@ -13,10 +13,14 @@ import Instructions from './instructions'
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 100%;
+  margin-right: 54px;
 `
 const Div = styled.div`
   display: flex;
+  width: 1440px;
+  height: auto;
+  background-color: #f0f0f0;
 `
 
 
