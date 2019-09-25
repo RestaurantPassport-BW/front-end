@@ -16,6 +16,7 @@ const Section = styled.section`
   width: 100%;
   margin-right: 54px;
 `
+
 const Div = styled.div`
   display: flex;
   width: 1440px;
