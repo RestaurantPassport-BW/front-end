@@ -47,7 +47,9 @@ function RestCard(props) {
   const [check, setCheck] = useState("Check In");
   const [iCheck, setICheck] = useState(true);
 
-  const changeState = () => {
+  const changeState = e => {
+    // if (e.target.index%2 === 1)
+    
     setCname(!cName);
   };
 
@@ -58,7 +60,7 @@ function RestCard(props) {
   };
 
   return (
-    <SDiv className={cName ? "restCard" : "expandedCard"} onClick={changeState}>
+    <SDiv className={cName ? "restCard" : props.index%2 === 0 ? 'expandedCardEven' : 'expandedCardOdd'} onClick={changeState} style={{order: props.index}}>
       <SImg src={props.image} />
       <H1>{props.name}</H1>
       <p>Cuisine: {props.cuisine}</p>
