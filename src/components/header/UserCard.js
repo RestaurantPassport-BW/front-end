@@ -1,12 +1,18 @@
 import React from 'react'
 import EditUserCard from "./EditUserCard";
-import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap"
 
 function UserCard() {
+
+  const logOut = () => { 
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      window.location.reload(true)
+  };
     return (
         <>
         <main>
-            <NavLink to="/login" className="logoutBtn">| &#8592;</NavLink>
+            <Button variant="link" size="sm" onClick={logOut} className="logoutBtn" type="submit">| &#8592;</Button>
             <header>
                 <img 
                 className="userCardImg"

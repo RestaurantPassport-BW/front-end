@@ -8,6 +8,7 @@ import Home from './Home'
 
 
 
+
 const Section = styled.section`
   display: flex;
   flex-direction: column;
