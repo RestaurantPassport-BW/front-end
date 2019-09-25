@@ -35,10 +35,9 @@ function Dashboard() {
      <Div>
       <Header />
         <Section>
-          <TabNav />
-          <img className="cityImage" src="../img/downtown-austin.jpg" alt="downtown austin"/>
+          <Route path={'/dashboard'} render={() => <TabNav/>} />
           <Route exact strict path={'/dashboard'} render={() => <Home />}/>
-          <Route path={'/dashboard/austin'} render={() => <RestList />}/>
+          <Route path={'/dashboard/passport'} render={() => <RestList />}/>
         </Section>
       </Div>    
   )

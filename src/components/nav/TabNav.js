@@ -7,28 +7,21 @@ function TabNav() {
     return (
         <div>
             <Nav tabs="true" className="navTab">
-                
                 <NavLink className='link' 
-                to="/dashboard/austin"
-                exact 
+                to="/dashboard/passport"
                 activeClassName="selected">
-                Austin
+                <strong>My Passport</strong>
                 </NavLink>
 
                 <NavLink className="link" 
-                to="#" activeClassName='selected'>
-                San Francisco *Coming Soon*
+                exact
+                to="/dashboard"
+                activeClassName='selected'>
+                <strong>Home</strong> 
                 </NavLink>
-            
-            
-                <NavLink className="link" 
-                to="#" activeClassName='selected'>
-                Denver *Coming Soon*
-                </NavLink>
-            
-            
-                <NavLink to="#" className="link">
-                <span>&oplus;</span>
+        
+                <NavLink to="#" className="addPage">
+                <strong>&oplus;</strong>
                 </NavLink>
             </Nav>
         </div>
