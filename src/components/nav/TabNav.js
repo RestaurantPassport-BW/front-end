@@ -9,16 +9,22 @@ function TabNav() {
             <Nav tabs="true" className="navTab">
                 
                 <NavLink className='link' 
-                to="/dashboard/austin" 
+                to="/dashboard/austin"
+                exact 
                 activeClassName="selected">
                 Austin
                 </NavLink>
+
+                <NavLink className="link" 
+                to="#" activeClassName='selected'>
+                San Francisco *Coming Soon*
+                </NavLink>
             
             
-                <NavLink className="link" to="#" activeClassName='selected' >San Francisco *Coming Soon*</NavLink>
-            
-            
-                <NavLink className="link" to="#" activeClassName='selected' >Denver *Coming Soon*</NavLink>
+                <NavLink className="link" 
+                to="#" activeClassName='selected'>
+                Denver *Coming Soon*
+                </NavLink>
             
             
                 <NavLink to="#" className="link">
