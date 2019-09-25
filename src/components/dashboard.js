@@ -18,7 +18,7 @@ const Section = styled.section`
 const Div = styled.div`
   display: flex;
   width: 1440px;
-  height: 1024px;
+  height: auto;
   background-color: #f0f0f0;
 `
 
