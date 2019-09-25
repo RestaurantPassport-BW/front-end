@@ -51,9 +51,10 @@ export default withFormik({
             
     axiosWithAuth()
         .post("https://mhagner-rest-pass.herokuapp.com/api/auth/login", values)
-        .then(data => {  
-        localStorage.setItem('token', JSON.stringify(data.token));
-        localStorage.setItem('user', JSON.stringify('user'))
+        .then(res => { 
+        console.log(res.data) 
+        localStorage.setItem('token', res.data.token);
+        localStorage.setItem('user', res.data.user.firstName);
         props.history.push('/dashboard')
       })
       .catch(err => console.log(err.message));
