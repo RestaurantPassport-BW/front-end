@@ -113,8 +113,10 @@ function RestList(props) {
     return (
         <Div className='restaurant-list grid-view' >
             {restaurant.map((rest, index) => (
-                <RestCard 
+								<RestCard 
+										style={{border: "1px solid red"}}
                     key={index}
+                    index={index}
                     image={rest.image}
                     name={rest.name}
                     cuisine={rest.cuisine}
