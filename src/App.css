@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #fafafa;
+}
+
 .App {
   text-align: center;
 
@@ -24,12 +33,20 @@
 
 main {
   width: 85vw;
-  min-height: 40vh;
+  border-radius: 5px;
+
   max-width: 500px;
-  margin: 35px auto;
+  margin: 90px auto;
   background: white;
   padding: 15px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 10px rgba(51, 51, 51, 0.12);
+}
+
+.cardTitle {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
 }
 
 .hidden {
@@ -39,6 +56,7 @@ main {
 .show {
   display: block;
 }
+
 
 .checkShow {
   display: block;
@@ -98,26 +116,83 @@ main {
   width: 600px;
 }
 
+.btn-secondary {
+  background: #6f52ed;
+  padding: 7px 28px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background: #8b74f0;
+}
+
 .logoutBtn{
   display: flex;
   color: #6f52ed;
   border: none;
   text-decoration: none;
 }
-.loginForm{
+
+.text-center {
+  border: none;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  stroke: none;
+}
+.signupForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.signupForm{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.input{
+.input {
   margin-bottom: 20px;
   width: 80%;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #f3f3f3;
+  font-weight: bold;
 }
+
+.city_dropdown {
+  background: #f3f3f3;
+  height: 36px;
+  color: rgb(82, 82, 82);
+}
+
+.error {
+  color: red;
+  display: block;
+}
+
+.card-footer {
+  background: #fafafa;
+  border: none;
+  width: 100%;
+}
+
+a {
+  color: #6f52ed;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #8b74f0;
+  font-weight: bold;
+}
+
+.card-header {
+  background: #fafafa;
+  border: none;
+  width: 100%;
+}
+
 .cardTitle{
   margin-bottom: 30px;
 }
