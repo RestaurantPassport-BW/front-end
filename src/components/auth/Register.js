@@ -1,5 +1,5 @@
 import React from "react";
-import { withFormik, Form, Field } from "formik";
+import { withFormik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import axios from "axios";
 import { Card, Button } from "react-bootstrap";
@@ -60,36 +60,40 @@ const Register = ({ errors, touched }) => {
           <Card.Body>
             <Card.Title className="cardTitle">Add Your Info</Card.Title>
             <Form className="signupForm">
-              {touched.firstName && errors.firstName && (
+              {/* {touched.firstName && errors.firstName && (
                 <p className="error">{errors.firstName}</p>
-              )}
+              )} */}
+              <ErrorMessage name="firstName" />
               <Field
                 className="input"
                 type="text"
                 name="firstName"
                 placeholder="First Name"
               />
-              {touched.lastName && errors.lastName && (
+              {/* {touched.lastName && errors.lastName && (
                 <p className="error">{errors.lastName}</p>
-              )}
+              )} */}
+              <ErrorMessage name="lastName" />
               <Field
                 className="input"
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
               />
-              {touched.email && errors.email && (
+              {/* {touched.email && errors.email && (
                 <p className="error">{errors.email}</p>
-              )}
+              )} */}
+              <ErrorMessage name="email" />
               <Field
                 className="input"
                 type="text"
                 name="email"
                 placeholder="E-mail"
               />
-              {touched.password && errors.password && (
+              {/* {touched.password && errors.password && (
                 <p className="error">{errors.password}</p>
-              )}
+              )} */}
+              <ErrorMessage name="password" />
               <Field
                 className="input"
                 type="password"
@@ -97,6 +101,7 @@ const Register = ({ errors, touched }) => {
                 placeholder="Password"
               />
               {}
+              <ErrorMessage name="city" />
               <Field
                 className="input city_dropdown"
                 component="select"

@@ -1,5 +1,5 @@
 import React from "react";
-import { withFormik, Form, Field } from "formik";
+import { withFormik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import axiosWithAuth from "../../helpers/axiosWithAuth";
 import { Card, Button } from "react-bootstrap";
@@ -60,18 +60,20 @@ const Login = ({ errors, touched }) => {
           <Card.Body>
             <Card.Title className="cardTitle">Login</Card.Title>
             <Form className="loginForm">
-              {touched.email && errors.email && (
+              {/* {touched.email && errors.email && (
                 <p className="error">{errors.email}</p>
-              )}
+              )} */}
+              <ErrorMessage name="email" />
               <Field
                 type="email"
                 name="email"
                 placeholder="Email:"
                 className="input"
               />
-              {touched.password && errors.password && (
+              {/* {touched.password && errors.password && (
                 <p className="error">{errors.password}</p>
-              )}
+              )} */}
+              <ErrorMessage name="password" />
               <Field
                 type="password"
                 name="password"
