@@ -25,6 +25,8 @@ const Div = styled.div`
   width: 1440px;
   height: auto;
   background-color: #f0f0f0;
+  margin: 0 auto;
+
 `;
 
 function Dashboard() {

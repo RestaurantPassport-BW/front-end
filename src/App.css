@@ -4,11 +4,16 @@
 
 html,
 body {
-  background: #fafafa;
+  background-color: #f0f0f0;
 }
 
 .App {
   text-align: center;
+  
+}
+
+.navTab2{
+  justify-content: space-between;
 }
 
 .addPage {
@@ -25,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 48%;
+  /* margin-left: 48%; */
   text-decoration: none;
 }
 

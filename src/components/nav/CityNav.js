@@ -10,7 +10,7 @@ const Div = styled.div`
 function TabNav() {
   return (
     <Div>
-      <Nav tabs="true" className="navTab">
+      <Nav tabs="true" className="navTab2">
         <NavLink
           className="link"
           exact

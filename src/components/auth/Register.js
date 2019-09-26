@@ -1,7 +1,7 @@
 import React from "react";
 import { withFormik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-import axios from "axios";
+import axiosWithAuth from '../../helpers/axiosWithAuth'
 import { Card, Button } from "react-bootstrap";
 // import styled from 'styled-components';
 
@@ -164,7 +164,7 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
-    axios
+    axiosWithAuth()
       .post("https://mhagner-rest-pass.herokuapp.com/api/auth/register", values)
       .then(data => {
         localStorage.setItem("token", JSON.stringify(data.token));
