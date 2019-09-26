@@ -5,10 +5,10 @@ import { Icon } from 'semantic-ui-react';
 function Filter() {
     return (
         <>
-            <Form>
+            <Form className="filter">
                 <FormGroup>
-                    <Icon name="food" /><Label for="CuisineCheckbox">Cuisine</Label>
-                    <div>
+                    <Icon name="food" className="filterIcon" /><Label className="filterLabel"for="CuisineCheckbox">Cuisine</Label>
+                    <div className="filterList">
                         <CustomInput type="checkbox" id="Checkbox" label="Tex-Mex" />
                         <CustomInput type="checkbox" id="Checkbox2" label="Authentic Mexican" />
                         <CustomInput type="checkbox" id="Checkbox3" label="American" />
@@ -20,7 +20,7 @@ function Filter() {
                     </div>
                 </FormGroup>
             </Form>
-            <Form>
+            {/* <Form>
                 <FormGroup>
                     <Icon name="clock"/><Label for="PeriodCheckbox">Period</Label>
                     <div>
@@ -31,7 +31,7 @@ function Filter() {
                         <CustomInput type="checkbox" id="Checkbox13" label="Dessert" />
                     </div>
                 </FormGroup>
-            </Form>
+            </Form> */}
 
         </>
     )

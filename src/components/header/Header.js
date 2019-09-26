@@ -2,19 +2,33 @@ import React from 'react'
 import UserCard from './UserCard'
 import Filter from './Filter'
 import styled from 'styled-components'
+import { Icon } from 'semantic-ui-react'
 
 const Div = styled.div`
-  margin: 0 25px;
+  margin-top: 15px;
+  margin-right: 30px;
 `
 
 const H2 = styled.h2`
-  margin: 25px auto;
+  margin-left: 255px;
+  margin-top: 15px;
+  margin-bottom: 16px;
+  font-family: Lato;
+  font-size: 19px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
+  display: flex;
+
 `
 
 function Header() {
   return (
     <Div>
-      <H2><span role='img' aria-label='breifcase'>&#128188;</span> Restaurant Passport</H2>
+      <H2><Icon inverted color='violet' name="briefcase"/>PASSPORT</H2>
       <UserCard />
       <Filter />
     </Div>

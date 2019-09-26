@@ -1,25 +1,28 @@
 import React from 'react'
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav } from 'react-bootstrap';
+import { NavLink } from "react-router-dom";
 
 
 function TabNav() {
     return (
         <div>
-            <Nav tabs>
-                <NavItem>
-                    <NavLink href="/dashboard/austin" activeclassname="selected">Austin</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="#" disabled >San Francisco *Coming Soon*</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="#" disabled >Denver *Coming Soon*</NavLink>
-                </NavItem>
-                <NavItem className="addPage">
-                    <NavLink href="#" className="addPageBtn">
-                    <span>&oplus;</span>
-                    </NavLink>
-                </NavItem>
+            <Nav tabs="true" className="navTab">
+                <NavLink className='link' 
+                to="/dashboard/passport"
+                activeClassName="selected">
+                <strong>My Passport</strong>
+                </NavLink>
+
+                <NavLink className="link" 
+                exact
+                to="/dashboard"
+                activeClassName='selected'>
+                <strong>Home</strong> 
+                </NavLink>
+        
+                <NavLink to="#" className="addPage">
+                <strong>&oplus;</strong>
+                </NavLink>
             </Nav>
         </div>
     )

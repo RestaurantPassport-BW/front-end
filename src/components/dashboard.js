@@ -13,9 +13,19 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-right: 54px;
+  width: 600px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #f7f7f7;
 `
+
 const Div = styled.div`
   display: flex;
+  width: 1440px;
+  height: auto;
+  background-color: #f0f0f0;
 `
 
 
@@ -25,9 +35,9 @@ function Dashboard() {
      <Div>
       <Header />
         <Section>
-          <TabNav />
+          <Route path={'/dashboard'} render={() => <TabNav/>} />
           <Route exact strict path={'/dashboard'} render={() => <Home />}/>
-          <Route path={'/dashboard/austin'} render={() => <RestList />}/>
+          <Route path={'/dashboard/passport'} render={() => <RestList />}/>
         </Section>
       </Div>    
   )
