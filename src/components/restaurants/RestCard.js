@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const SDiv = styled.div`
-  margin: 10px 2.5px;
-  border: 1px solid black;
-  position: relative;
+    margin: 10px 2.5px;
+    border: 1px solid black;
+    position: relative;
+    
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 const IDiv = styled.div`
@@ -23,10 +27,7 @@ const Button = styled.button`
 const SImg = styled.img`
   width: 273px;
   height: 176px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  border-radius: 5px;
 `;
 
 const H1 = styled.h1`

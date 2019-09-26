@@ -23,8 +23,8 @@
 }
 
 main {
-  width: 85vw;
-  min-height: 40vh;
+  /* width: 85vw; */
+  /* min-height: 40vh; */
   max-width: 500px;
   margin: 35px auto;
   background: white;
@@ -103,7 +103,9 @@ main {
   color: #6f52ed;
   border: none;
   text-decoration: none;
+  background: #ffffff;
 }
+
 .loginForm{
   display: flex;
   flex-direction: column;
