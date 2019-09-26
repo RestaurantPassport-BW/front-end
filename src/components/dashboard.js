@@ -1,15 +1,12 @@
-import React from 'react'
-import RestList from './restaurants/RestList'
-import TabNav from './nav/TabNav'
-import Header from './header/Header'
-import styled from 'styled-components'
-import { Route } from 'react-router'
-import Home from './Home'
-import CityNav from './nav/CityNav'
-import NYI from './restaurants/NYI'
-
-
-
+import React from "react";
+import RestList from "./restaurants/RestList";
+import TabNav from "./nav/TabNav";
+import Header from "./header/Header";
+import styled from "styled-components";
+import { Route } from "react-router";
+import Home from "./Home";
+import CityNav from "./nav/CityNav";
+import NYI from "./restaurants/NYI";
 
 const Section = styled.section`
   display: flex;
@@ -21,30 +18,31 @@ const Section = styled.section`
   border-radius: 5px;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
   background-color: #f7f7f7;
-`
+`;
 
 const Div = styled.div`
   display: flex;
   width: 1440px;
   height: auto;
   background-color: #f0f0f0;
-`
-
-
+`;
 
 function Dashboard() {
   return (
-     <Div>
+    <Div>
       <Header />
-        <Section>
-          <Route path={'/dashboard'} render={() => <TabNav/>} />
-          <Route exact strict path={'/dashboard'} render={() => <Home />}/>
-          <Route path={'/dashboard/passport'} render={() => <CityNav />}/>
-          <Route path={`/dashboard/passport/austin`} render={() => <RestList />}/>
-          <Route path={'/dashboard/passport/NYI'} render={() => <NYI />}/>
-        </Section>
-      </Div>    
-  )
+      <Section>
+        <Route path={"/dashboard"} render={() => <TabNav />} />
+        <Route exact strict path={"/dashboard"} render={() => <Home />} />
+        <Route path={"/dashboard/passport"} render={() => <CityNav />} />
+        <Route
+          path={`/dashboard/passport/austin`}
+          render={() => <RestList />}
+        />
+        <Route path={"/dashboard/passport/NYI"} render={() => <NYI />} />
+      </Section>
+    </Div>
+  );
 }
 
-export default Dashboard
+export default Dashboard;

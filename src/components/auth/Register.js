@@ -118,12 +118,14 @@ const Register = ({ errors, touched }) => {
                 Sign Up!
               </Button>
             </Form>
-        </Card.Body>
-        <Card.Footer className="text-muted"><a href="https://musing-swartz-94f7fb.netlify.com/index.html">Take me back!</a></Card.Footer>
-      </Card>
-    </main>            
-
-
+          </Card.Body>
+          <Card.Footer className="text-muted">
+            <a href="https://musing-swartz-94f7fb.netlify.com/index.html">
+              Take me back!
+            </a>
+          </Card.Footer>
+        </Card>
+      </main>
     </>
   );
 };

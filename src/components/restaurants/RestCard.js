@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const SDiv = styled.div`
-    margin: 10px 2.5px;
-    border: 1px solid black;
-    position: relative;
-    
-    &:hover {
-        cursor: pointer;
-    }
+  margin: 10px 2.5px;
+  border: 1px solid black;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const IDiv = styled.div`
@@ -50,7 +50,7 @@ function RestCard(props) {
 
   const changeState = e => {
     // if (e.target.index%2 === 1)
-    
+
     setCname(!cName);
   };
 
@@ -61,7 +61,17 @@ function RestCard(props) {
   };
 
   return (
-    <SDiv className={cName ? "restCard" : props.index%2 === 0 ? 'expandedCardEven' : 'expandedCardOdd'} onClick={changeState} style={{order: props.index}}>
+    <SDiv
+      className={
+        cName
+          ? "restCard"
+          : props.index % 2 === 0
+          ? "expandedCardEven"
+          : "expandedCardOdd"
+      }
+      onClick={changeState}
+      style={{ order: props.index }}
+    >
       <SImg src={props.image} />
       <H1>{props.name}</H1>
       <p>Cuisine: {props.cuisine}</p>

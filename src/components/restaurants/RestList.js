@@ -60,8 +60,7 @@ function RestList(props) {
       weekend: "2pm-4am"
     },
     {
-      image:
-        "https://i.kym-cdn.com/entries/icons/mobile/000/025/294/hrd.jpg",
+      image: "https://i.kym-cdn.com/entries/icons/mobile/000/025/294/hrd.jpg",
       name: "Kevin",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -101,7 +100,7 @@ function RestList(props) {
     },
     {
       image:
-				"https://www.dailydot.com/wp-content/uploads/0d9/73/4554cfd4ba99f0cd.pngg",
+        "https://www.dailydot.com/wp-content/uploads/0d9/73/4554cfd4ba99f0cd.pngg",
       name: "Jacobs",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -125,11 +124,13 @@ function RestList(props) {
 
   return (
     <Div className="restaurant-list grid-view">
-				{<img
-        className="cityImage"
-        src="https://i.pinimg.com/originals/bc/0c/cd/bc0ccd2662956d19089ddc94ebd5ca7e.jpg"
-        alt="downtown austin"
-      />}
+      {
+        <img
+          className="cityImage"
+          src="https://i.pinimg.com/originals/bc/0c/cd/bc0ccd2662956d19089ddc94ebd5ca7e.jpg"
+          alt="downtown austin"
+        />
+      }
       {restaurant.map((rest, index) => (
         <RestCard
           style={{ border: "1px solid red" }}

@@ -1,13 +1,13 @@
-import React from 'react'
-import UserCard from './UserCard'
-import Filter from './Filter'
-import styled from 'styled-components'
-import { Icon } from 'semantic-ui-react'
-import { Route } from "react-router"
+import React from "react";
+import UserCard from "./UserCard";
+import Filter from "./Filter";
+import styled from "styled-components";
+import { Icon } from "semantic-ui-react";
+import { Route } from "react-router";
 const Div = styled.div`
   margin-top: 15px;
   margin-right: 30px;
-`
+`;
 
 const H2 = styled.h2`
   margin-left: 255px;
@@ -22,17 +22,19 @@ const H2 = styled.h2`
   letter-spacing: normal;
   color: #333333;
   display: flex;
-
-`
+`;
 
 function Header() {
   return (
     <Div>
-      <H2><Icon inverted color='violet' name="briefcase"/>PASSPORT</H2>
+      <H2>
+        <Icon inverted color="violet" name="briefcase" />
+        PASSPORT
+      </H2>
       <UserCard />
-      <Route path={'/dashboard/passport'} render={() => <Filter />}/>
+      <Route path={"/dashboard/passport"} render={() => <Filter />} />
     </Div>
-  )
+  );
 }
 
-export default Header
+export default Header;
