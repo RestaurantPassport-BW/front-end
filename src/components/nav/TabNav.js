@@ -7,17 +7,17 @@ function TabNav() {
     return (
         <div>
             <Nav tabs="true" className="navTab">
-                <NavLink className='link' 
-                to="/dashboard/passport"
+                <NavLink className='link'
+                exact 
+                to="/dashboard"
                 activeClassName="selected">
-                <strong>My Passport</strong>
+                <strong>Home</strong>
                 </NavLink>
 
                 <NavLink className="link" 
-                exact
-                to="/dashboard"
+                to="/dashboard/passport"
                 activeClassName='selected'>
-                <strong>Home</strong> 
+                <strong>My Passport</strong> 
                 </NavLink>
         
                 <NavLink to="#" className="addPage">

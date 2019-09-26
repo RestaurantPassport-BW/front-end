@@ -3,7 +3,7 @@ import UserCard from './UserCard'
 import Filter from './Filter'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
-
+import { Route } from "react-router"
 const Div = styled.div`
   margin-top: 15px;
   margin-right: 30px;
@@ -30,7 +30,7 @@ function Header() {
     <Div>
       <H2><Icon inverted color='violet' name="briefcase"/>PASSPORT</H2>
       <UserCard />
-      <Filter />
+      <Route path={'/dashboard/passport'} render={() => <Filter />}/>
     </Div>
   )
 }
