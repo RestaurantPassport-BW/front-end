@@ -5,6 +5,8 @@ import Header from './header/Header'
 import styled from 'styled-components'
 import { Route } from 'react-router'
 import Home from './Home'
+import CityNav from './nav/CityNav'
+import NYI from './restaurants/NYI'
 
 
 
@@ -37,7 +39,9 @@ function Dashboard() {
         <Section>
           <Route path={'/dashboard'} render={() => <TabNav/>} />
           <Route exact strict path={'/dashboard'} render={() => <Home />}/>
-          <Route path={'/dashboard/passport'} render={() => <RestList />}/>
+          <Route path={'/dashboard/passport'} render={() => <CityNav />}/>
+          <Route path={`/dashboard/passport/austin`} render={() => <RestList />}/>
+          <Route path={'/dashboard/passport/NYI'} render={() => <NYI />}/>
         </Section>
       </Div>    
   )

@@ -20,9 +20,6 @@ function TabNav() {
                 <strong>My Passport</strong> 
                 </NavLink>
         
-                <NavLink to="#" className="addPage">
-                <strong>&oplus;</strong>
-                </NavLink>
             </Nav>
         </div>
     )

@@ -6,14 +6,14 @@ const Div = styled.div`
 `
 
 
-function Home() {
+function NYI() {
   return(
     <Div>
-      <h2>Welcome to Resturant Passport!</h2>
-      <p>Click My Passports to see your first one!</p>
+      <h2>This page is not yet implemented</h2>
+      <p>Please Select Austin!</p>
     </Div>
   )
 
 }
 
-export default Home 
+export default NYI 
