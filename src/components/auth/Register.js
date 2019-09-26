@@ -5,7 +5,7 @@ import axiosWithAuth from '../../helpers/axiosWithAuth'
 import { Card, Button } from "react-bootstrap";
 // import styled from 'styled-components';
 
-const Register = ({ errors, touched }) => {
+const Register = () => {
   return (
     <>
       <main>
