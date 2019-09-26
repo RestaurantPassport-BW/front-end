@@ -167,7 +167,9 @@ export default withFormik({
     axios
       .post("https://mhagner-rest-pass.herokuapp.com/api/auth/register", values)
       .then(data => {
+        
         localStorage.setItem("token", JSON.stringify(data.token));
+        localStorage.setItem("user", data.data.user.firstName);
         props.history.push("/dashboard");
       })
       .catch(err => {
