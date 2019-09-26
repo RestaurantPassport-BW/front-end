@@ -35,9 +35,9 @@ body {
  }
 
 main {
-  width: 85vw;
-  border-radius: 5px;
 
+  /* width: 85vw; */
+  /* min-height: 40vh; */
   max-width: 500px;
   margin: 90px auto;
   background: white;
@@ -136,7 +136,9 @@ main {
   color: #6f52ed;
   border: none;
   text-decoration: none;
+  background: #ffffff;
 }
+
 
 .text-center {
   border: none;
