@@ -16,28 +16,27 @@ function RestList(props) {
         .get('https://mhagner-rest-pass.herokuapp.com/api/users/restaurants')
         .then(res => {
   				console.log(res)
-          newRestaurant(res.data)
+          newRestaurant(res.data.restaurants)
         })
         .catch(err => console.log(err))
     }, [])
 
   return (
     <Div className="restaurant-list grid-view">
-      {
+      
         <img
           className="cityImage"
           src="https://i.pinimg.com/originals/bc/0c/cd/bc0ccd2662956d19089ddc94ebd5ca7e.jpg"
           alt="downtown austin"
         />
-      }
+      
       {restaurant.map((rest, index) => (
         <RestCard
-          style={{ border: "1px solid red" }}
           key={index}
           index={index}
           image={rest.image}
           name={rest.name}
-          cuisine={rest.cuisine}
+          cuisine={rest.category}
           phone={rest.phone}
           address={rest.address}
           week={rest.week}

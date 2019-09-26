@@ -68,7 +68,8 @@ main {
 }
 .restCard {
   width: 275px;
-  height: 235px;
+  /* height: 235px; */
+  height: auto;
   border-radius: 5px;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
