@@ -11,7 +11,7 @@ function RestList(props) {
   const [restaurant] = useState([
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://blog.emojipedia.org/content/images/2019/02/yawning-face-emojipedia.png",
       name: "John",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -21,7 +21,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://blog.emojipedia.org/content/images/2019/02/deaf-person-emojipedia.png",
       name: "Jacobs",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -31,7 +31,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://blog.emojipedia.org/content/images/2019/02/deaf-man-emojipedia.png",
       name: "Jingle",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -41,7 +41,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://blog.emojipedia.org/content/images/2019/02/deaf-woman-emojipedia.png",
       name: "Shane",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -51,7 +51,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://blog.emojipedia.org/content/images/2019/02/otter-emojipedia.png",
       name: "Derrik",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -61,7 +61,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://i.kym-cdn.com/entries/icons/mobile/000/025/294/hrd.jpg",
       name: "Kevin",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -71,7 +71,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://ih0.redbubble.net/image.494693388.6395/flat,1000x1000,075,f.u1.jpg",
       name: "Matt",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -81,7 +81,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+        "https://cdn.vox-cdn.com/thumbor/5DbJlht9727uCR51xE1QStCEZCU=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10838085/4head.jpg",
       name: "Matthew",
       cuisine: "All-types",
       phone: "555-555-0123",
@@ -101,7 +101,7 @@ function RestList(props) {
     },
     {
       image:
-        "https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg",
+				"https://www.dailydot.com/wp-content/uploads/0d9/73/4554cfd4ba99f0cd.pngg",
       name: "Jacobs",
       cuisine: "All-types",
       phone: "555-555-0123",
