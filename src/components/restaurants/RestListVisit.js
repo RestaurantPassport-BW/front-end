@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axiosWithAuth from '../../helpers/axiosWithAuth'
-// import RestCard from "./RestCard";
 import RestCardVisit from './RestCardVisit'
 import styled from "styled-components";
 
 const Div = styled.div`
   margin: 15px auto;
+  position: relative;
 `;
 
-function RestList(props) {
+function RestListVisit(props) {
 
   const [restaurant, newRestaurant] =useState([])
 
@@ -24,11 +24,14 @@ function RestList(props) {
   return (
     <Div className="restaurant-list grid-view">
       
-        <img
-          className="cityImage"
-          src="https://i.pinimg.com/originals/bc/0c/cd/bc0ccd2662956d19089ddc94ebd5ca7e.jpg"
-          alt="downtown austin"
-        />
+      <img
+			className="cityImage"
+			src={require("../../img/austin-downtown2.png")}
+			alt="downtown austin"
+			/>
+			<h1 className="cityImageText">Austin Texas</h1>
+			<strong className="cityImageText1">20 restaurants</strong>
+
       
       {restaurant.map((rest, index) => (
         <RestCardVisit
@@ -48,4 +51,4 @@ function RestList(props) {
   );
 }
 
-export default RestList;
+export default RestListVisit;

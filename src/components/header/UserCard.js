@@ -49,7 +49,7 @@ function UserCard() {
         />
 
         <div className="userName">{localStorage.getItem("user")}</div>
-        <span>{visited.length} Check-Ins | 3 Passports</span>
+        <span>{visited.length} Check-Ins</span>
       </main>
     </>
   );
