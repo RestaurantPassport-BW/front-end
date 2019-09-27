@@ -9,7 +9,8 @@ function Home() {
   return (
     <Div>
       <h2>Welcome to Resturant Passport!</h2>
-      <p>Click My Passports to see your first one!</p>
+      <p>Click Passports and then Austin to see your first one!</p>
+      <p>Click on My Passport to see the ones you have saved!</p>
     </Div>
   );
 }

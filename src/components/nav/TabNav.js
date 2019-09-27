@@ -20,7 +20,7 @@ function TabNav() {
           to="/dashboard/passport"
           activeClassName="selected"
         >
-          <strong>My Passport</strong>
+          <strong>Passports</strong>
         </NavLink>
       </Nav>
     </div>
