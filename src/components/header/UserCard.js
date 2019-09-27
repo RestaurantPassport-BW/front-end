@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import EditUserCard from "./EditUserCard";
+// import EditUserCard from "./EditUserCard";
 import { Dropdown } from "react-bootstrap";
 import { Icon } from "semantic-ui-react";
 import axiosWithAuth from "../../helpers/axiosWithAuth";
@@ -36,7 +36,7 @@ function UserCard() {
 
           <Dropdown.Menu>
             <Dropdown.Item>
-              <EditUserCard />
+              {/* <EditUserCard /> */}
             </Dropdown.Item>
             <Dropdown.Item onClick={logOut}>| &#8592; Logout</Dropdown.Item>
           </Dropdown.Menu>
@@ -44,8 +44,8 @@ function UserCard() {
 
         <img
           className="userCardImg"
-          src="https://via.placeholder.com/140"
-          alt="placeholder"
+          src={require('../../img/default-avatar.png')}
+          alt="default"
         />
 
         <div className="userName">{localStorage.getItem("user")}</div>
