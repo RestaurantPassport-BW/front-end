@@ -4,9 +4,9 @@ import TabNav from "./nav/TabNav";
 import Header from "./header/Header";
 import styled from "styled-components";
 import { Route } from "react-router";
-import Home from "./Home";
-import CityNav from "./nav/CityNav";
-import NYI from "./restaurants/NYI";
+// import Home from "./Home";
+// import CityNav from "./nav/CityNav";
+// import NYI from "./restaurants/NYI";
 import RestListVisit from './restaurants/RestListVisit'
 
 const Section = styled.section`
@@ -36,14 +36,11 @@ function Dashboard() {
       <Header />
       <Section>
         <Route path={"/dashboard"} component={TabNav} />
-        <Route exact strict path={"/dashboard"} component={Home} />
-        <Route path={"/dashboard/passport"} component={CityNav} />
-        <Route
-          path={`/dashboard/passport/austin`}
-          component={RestList}
-        />
-        <Route path={'/dashboard/passport/visit'} component={RestListVisit}/>
-        <Route path={"/dashboard/passport/NYI"} component={NYI} />
+        <Route exact strict path={"/dashboard"} component={RestList} />
+        {/* <Route path={"/dashboard/passport"} component={CityNav} /> */}
+
+        <Route path={'/dashboard/visit'} component={RestListVisit}/>
+        {/* <Route path={"/dashboard/passport/NYI"} component={NYI} /> */}
       </Section>
     </Div>
   );

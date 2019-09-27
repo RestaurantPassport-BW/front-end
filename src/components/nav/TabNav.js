@@ -12,15 +12,15 @@ function TabNav() {
           to="/dashboard"
           activeClassName="selected"
         >
-          <strong>Home</strong>
+          <strong>My Passport</strong>
         </NavLink>
 
         <NavLink
           className="link"
-          to="/dashboard/passport"
+          to="/dashboard/visit"
           activeClassName="selected"
         >
-          <strong>Passports</strong>
+          <strong>Visited</strong>
         </NavLink>
       </Nav>
     </div>

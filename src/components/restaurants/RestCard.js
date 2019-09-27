@@ -81,7 +81,9 @@ function RestCard(props) {
         console.log(res);
       })
       .catch(err => {
-        console.log(err);
+        alert("You've Already Visited This Place!");
+        console.log(err)
+        
       });
   };
 
