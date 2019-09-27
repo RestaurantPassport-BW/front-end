@@ -52,7 +52,7 @@ const Span = styled.span`
   left: 73%;
 `;
 
-function RestCard(props) {
+function RestCardVisit(props) {
   const [cName, setCname] = useState(true);
   const [check, setCheck] = useState("Check In");
   const [iCheck, setICheck] = useState(true);
@@ -68,8 +68,9 @@ function RestCard(props) {
     setCheck(!check);
     setICheck(!iCheck);
 
-    axiosWithAuth(props)
-      .post(`https://mhagner-rest-pass.herokuapp.com/api/users/visit/${props.id}`)
+    axiosWithAuth(props) 
+    .delete(`https://mhagner-rest-pass.herokuapp.com/api/users/visit/${props.id}`)
+      
       .then(res=> {console.log(res)})
       .catch(err => {console.log(err)})
 
@@ -115,10 +116,9 @@ function RestCard(props) {
         <p>Sat-Sun: {props.weekend}</p>
       </IDiv>
       <Bdiv>
-        <Button className={cName ? "hidden" : "show"}>Remove</Button>
         <Button className={cName ? "hidden" : "show"} onClick={changeCheckin}>
           {check ? (
-            "Check In"
+            "Remove"
           ) : (
             <span role="img" aria-label="check">
               &#10004;
@@ -130,4 +130,4 @@ function RestCard(props) {
   );
 }
 
-export default RestCard;
+export default RestCardVisit;

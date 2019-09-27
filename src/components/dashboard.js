@@ -7,6 +7,7 @@ import { Route } from "react-router";
 import Home from "./Home";
 import CityNav from "./nav/CityNav";
 import NYI from "./restaurants/NYI";
+import RestListVisit from './restaurants/RestListVisit'
 
 const Section = styled.section`
   display: flex;
@@ -41,6 +42,7 @@ function Dashboard() {
           path={`/dashboard/passport/austin`}
           render={() => <RestList />}
         />
+        <Route path={'/dashboard/passport/visit'} render={() => <RestListVisit />}/>
         <Route path={"/dashboard/passport/NYI"} render={() => <NYI />} />
       </Section>
     </Div>
