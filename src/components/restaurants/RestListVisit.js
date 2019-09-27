@@ -29,8 +29,7 @@ function RestListVisit(props) {
 			src={require("../../img/austin-downtown2.png")}
 			alt="downtown austin"
 			/>
-			<h1 className="cityImageText">Austin Texas</h1>
-			<strong className="cityImageText1">20 restaurants</strong>
+			<h1 className="cityImageText">My Passports</h1>
 
       
       {restaurant.map((rest, index) => (
