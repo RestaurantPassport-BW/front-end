@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axiosWithAuth from '../../helpers/axiosWithAuth'
-import RestCard from "./RestCard";
+import RestCardVisit from './RestCardVisit'
 import styled from "styled-components";
 
 const Div = styled.div`
@@ -8,34 +8,35 @@ const Div = styled.div`
   position: relative;
 `;
 
-function RestList(props) {
+function RestListVisit(props) {
 
   const [restaurant, newRestaurant] =useState([])
 
     useEffect(() => {
         axiosWithAuth()
-        .get('https://mhagner-rest-pass.herokuapp.com/api/users/restaurants')
+        .get('https://mhagner-rest-pass.herokuapp.com/api/users/visits')
         .then(res => {
-  				console.log(res)
-          newRestaurant(res.data.restaurants)
+          newRestaurant(res.data.visits)
         })
         .catch(err => console.log(err))
     }, [])
 
   return (
     <Div className="restaurant-list grid-view">
-			<img
+      
+      <img
 			className="cityImage"
 			src={require("../../img/austin-downtown2.png")}
 			alt="downtown austin"
 			/>
-			<h1 className="cityImageText">Austin Texas</h1>
-			<strong className="cityImageText1">20 restaurants</strong>
+			<h1 className="cityImageText">My Passports</h1>
 
+      
       {restaurant.map((rest, index) => (
-        <RestCard
+        <RestCardVisit
           key={index}
           id={rest.id}
+          index={index}
           image={rest.image}
           name={rest.name}
           cuisine={rest.category}
@@ -49,4 +50,4 @@ function RestList(props) {
   );
 }
 
-export default RestList;
+export default RestListVisit;

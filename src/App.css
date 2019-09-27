@@ -1,19 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #f0f0f0;
+}
+
 .App {
   text-align: center;
+  
+}
+
+.navTab2{
+  justify-content: space-between;
 }
 
 .addPage {
-  margin-left: 33%;
+  width: 90px;
+  height: 54px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6f52ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 48%; */
+  text-decoration: none;
+}
+
+.link:hover {
+  color: none;
 }
 
 main {
-  width: 85vw;
-  min-height: 40vh;
+  /* width: 85vw; */
+  /* min-height: 40vh; */
   max-width: 500px;
-  margin: 35px auto;
+  margin: 90px auto;
   background: white;
   padding: 15px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 10px rgba(51, 51, 51, 0.12);
+}
+.mainUserCard{
+  max-width: 500px;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 19px 10px rgba(51, 51, 51, 0.12);
+}
+
+.cardTitle {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
 }
 
 .hidden {
@@ -24,23 +69,274 @@ main {
   display: block;
 }
 
-.logoutBtn{
-  display: flex;
+.checkShow {
+  display: block;
 }
-.loginForm{
+.restCard {
+  width: 275px;
+  /* height: 235px; */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+.expandedCard {
+  width: 569px;
+  height: 505px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  /* order: -1; */
+  z-index: +1;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.expandedCardEven {
+  width: 569px;
+  height: 505px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  /* order: -1; */
+  z-index: +1;
+  /* position: absolute;
+  top: 50px;
+  left: 50px; */
+}
+.expandedCardOdd {
+  width: 569px;
+  height: 505px;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  /* order: -1; */
+  z-index: +1;
+  /* position: absolute;
+  top: 50px;
+  left: 50px; */
+}
+
+.expandedCard img {
+  width: 567px;
+  height: 176px;
+  border-radius: 5px;
+}
+
+.restaurant-list {
+  width: 600px;
+}
+
+.btn-secondary {
+  background: #6f52ed;
+  padding: 7px 28px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background: #8b74f0;
+}
+
+.logoutBtn {
+  display: flex;
+  color: #6f52ed;
+  border: none;
+  text-decoration: none;
+  background: #ffffff;
+}
+
+.text-center {
+  border: none;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  stroke: none;
+}
+.signupForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.signupForm{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.input{
+.input {
   margin-bottom: 20px;
   width: 80%;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #f3f3f3;
+  font-weight: bold;
 }
-.cardTitle{
+
+.city_dropdown {
+  background: #f3f3f3;
+  height: 36px;
+  color: rgb(82, 82, 82);
+}
+
+.error {
+  color: red;
+  display: block;
+}
+
+.card-footer {
+  background: #fafafa;
+  border: none;
+  width: 100%;
+}
+
+a {
+  color: #6f52ed;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #8b74f0;
+  font-weight: bold;
+}
+
+.card-header {
+  background: #fafafa;
+  border: none;
+  width: 100%;
+}
+
+.cardTitle {
   margin-bottom: 30px;
+}
+.navTab {
+  width: 600px;
+  height: 54px;
+  background-color: #ffffff;
+}
+.link {
+  width: 90px;
+  height: 54px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.selected {
+  width: 90px;
+  height: 54px;
+  background-color: #6f52ed;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  text-decoration: none;
+}
+.cityImage {
+  width: 600px;
+  height: 143px;
+  background-color: rgba(0, 0, 0, 0.27);
+}
+.cityImageText{
+  position: absolute; 
+  left: 0; 
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  margin-top: 70px;
+  margin-left: 30px;
+}
+.cityImageText1{
+  position: absolute; 
+  font-weight: 500;
+  font-size: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  left: 0;
+  margin-top: 120px;
+  margin-left: 30px;
+
+}
+.imgContainer{
+  position: relative; 
+  width: 100%;
+  height: 143px;
+}
+
+.userCard {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  margin-left: 255px;
+}
+.userCardImg {
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+.userName {
+  width: 100%;
+  height: auto;
+  font-family: Lato, sans serif;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
+  text-align: center;
+}
+.filterList {
+  text-align: left;
+  margin-left: 228px;
+}
+.filter {
+  margin-left: 47px;
+}
+.filterLabel {
+  font-family: Lato;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
+}
+.filterIcon {
+  margin-left: 265px;
+}
+.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
