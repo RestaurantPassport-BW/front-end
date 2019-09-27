@@ -12,7 +12,15 @@ function TabNav() {
           to="/dashboard"
           activeClassName="selected"
         >
-          <strong>My Passport</strong>
+          <strong>Home</strong>
+        </NavLink>
+
+        <NavLink
+          className="link"
+          to="/dashboard/passport"
+          activeClassName="selected"
+        >
+          <strong>Passports</strong>
         </NavLink>
 
         <NavLink
@@ -20,7 +28,7 @@ function TabNav() {
           to="/dashboard/visit"
           activeClassName="selected"
         >
-          <strong>Visited</strong>
+          <strong>My Passports</strong>
         </NavLink>
       </Nav>
     </div>
