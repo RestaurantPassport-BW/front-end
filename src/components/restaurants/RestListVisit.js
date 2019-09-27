@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axiosWithAuth from '../../helpers/axiosWithAuth'
-import RestCard from "./RestCard";
+// import RestCard from "./RestCard";
+import RestCardVisit from './RestCardVisit'
 import styled from "styled-components";
 
 const Div = styled.div`
@@ -13,10 +14,9 @@ function RestList(props) {
 
     useEffect(() => {
         axiosWithAuth()
-        .get('https://mhagner-rest-pass.herokuapp.com/api/users/restaurants')
+        .get('https://mhagner-rest-pass.herokuapp.com/api/users/visits')
         .then(res => {
-  				console.log(res)
-          newRestaurant(res.data.restaurants)
+          newRestaurant(res.data.visits)
         })
         .catch(err => console.log(err))
     }, [])
@@ -31,9 +31,10 @@ function RestList(props) {
         />
       
       {restaurant.map((rest, index) => (
-        <RestCard
+        <RestCardVisit
           key={index}
           id={rest.id}
+          index={index}
           image={rest.image}
           name={rest.name}
           cuisine={rest.category}

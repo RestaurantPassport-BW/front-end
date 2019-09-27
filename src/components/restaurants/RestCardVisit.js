@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import axiosWithAuth from "../../helpers/axiosWithAuth";
+import axiosWithAuth from '../../helpers/axiosWithAuth'
 
 const SDiv = styled.div`
   margin: 10px 2.5px;
@@ -24,7 +24,7 @@ const Button = styled.button`
   background-color: #6f52ed;
   align-self: flex-end;
   color: white;
-  &:hover {
+  &:hover{
     background-color: #ffffff;
     color: #6f52ed;
   }
@@ -52,37 +52,29 @@ const Span = styled.span`
   left: 85%;
 `;
 
-function RestCard(props) {
+function RestCardVisit(props) {
   const [cName, setCname] = useState(true);
-  const [iCheck, setICheck] = useState(true);
-  const [bName, setBname] = useState(true);
+  const [check, setCheck] = useState("Check In");
+  const [iCheck, setICheck] = useState(false);
 
   const changeState = e => {
+    // if (e.target.index%2 === 1)
+
     setCname(!cName);
-    if (iCheck === true) {
-      if (cName === true) {
-        setBname(false);
-      } else {
-        setBname(true);
-      }
-    }
   };
 
   const changeCheckin = e => {
     e.stopPropagation();
+    setCheck(!check);
     setICheck(!iCheck);
-    setBname(!bName);
 
-    axiosWithAuth(props)
-      .post(
-        `https://mhagner-rest-pass.herokuapp.com/api/users/visit/${props.id}`
-      )
-      .then(res => {
-        console.log(res);
+    axiosWithAuth(props) 
+      .delete(`https://mhagner-rest-pass.herokuapp.com/api/users/visit/${props.id}`)
+      .then(res=> {
+         window.location.reload();
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(err => {console.log(err)})
+
   };
 
   return (
@@ -95,6 +87,7 @@ function RestCard(props) {
           : "expandedCardOdd"
       }
       onClick={changeState}
+      style={{ order: props.index }}
     >
       <SImg src={props.image} />
       <H1>{props.name}</H1>
@@ -124,12 +117,18 @@ function RestCard(props) {
         <p>Sat-Sun: {props.weekend}</p>
       </IDiv>
       <Bdiv>
-        <Button className={bName ? "hidden" : "show"} onClick={changeCheckin}>
-          Check In
+        <Button className={cName ? "hidden" : "show"} onClick={changeCheckin}>
+          {check ? (
+            "Remove"
+          ) : (
+            <span role="img" aria-label="check">
+              &#10004;
+            </span>
+          )}
         </Button>
       </Bdiv>
     </SDiv>
   );
 }
 
-export default RestCard;
+export default RestCardVisit;
