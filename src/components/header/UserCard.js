@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import EditUserCard from "./EditUserCard";
 import { Dropdown } from "react-bootstrap";
 import { Icon } from "semantic-ui-react";
+import axiosWithAuth from "../../helpers/axiosWithAuth";
 
 function UserCard() {
   const logOut = () => {
     localStorage.clear();
     window.location.reload(true);
   };
+  
+  const [visited, setVisited ]=useState([])
+  
+  useEffect(() => {
+    axiosWithAuth()
+    .get('https://mhagner-rest-pass.herokuapp.com/api/users/visits')
+    .then(res => {
+        setVisited(res.data.visits)
+    })
+    .catch(err => console.log(err))
+}, [])
+
+
   return (
     <>
       <main className="userCard">
@@ -35,7 +49,7 @@ function UserCard() {
         />
 
         <div className="userName">{localStorage.getItem("user")}</div>
-        <span>45 Check-Ins | 3 Passports</span>
+        <span>{visited.length} Check-Ins | 3 Passports</span>
       </main>
     </>
   );
