@@ -48,14 +48,14 @@ const Bdiv = styled.div`
 
 const Span = styled.span`
   position: absolute;
-  top: 83%;
-  left: 73%;
+  top: 85%;
+  left: 85%;
 `;
 
 function RestCardVisit(props) {
   const [cName, setCname] = useState(true);
   const [check, setCheck] = useState("Check In");
-  const [iCheck, setICheck] = useState(true);
+  const [iCheck, setICheck] = useState(false);
 
   const changeState = e => {
     // if (e.target.index%2 === 1)
@@ -69,9 +69,11 @@ function RestCardVisit(props) {
     setICheck(!iCheck);
 
     axiosWithAuth(props) 
-    .delete(`https://mhagner-rest-pass.herokuapp.com/api/users/visit/${props.id}`)
-      
-      .then(res=> {console.log(res)})
+      .delete(`https://mhagner-rest-pass.herokuapp.com/api/users/visit/${props.id}`)
+      .then(res=> {
+        console.log(res)
+        changeCheckin();
+      })
       .catch(err => {console.log(err)})
 
   };
