@@ -24,7 +24,7 @@ function UserCard() {
 
   return (
     <>
-      <main className="userCard">
+      <main className="mainUserCard">
         <Dropdown>
           <Dropdown.Toggle
             className="logoutBtn"
