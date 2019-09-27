@@ -71,8 +71,7 @@ function RestCardVisit(props) {
     axiosWithAuth(props) 
       .delete(`https://mhagner-rest-pass.herokuapp.com/api/users/visit/${props.id}`)
       .then(res=> {
-        console.log(res)
-        changeCheckin();
+         window.location.reload();
       })
       .catch(err => {console.log(err)})
 

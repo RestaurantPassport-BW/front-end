@@ -48,8 +48,8 @@ const Bdiv = styled.div`
 
 const Span = styled.span`
   position: absolute;
-  top: 83%;
-  left: 73%;
+  top: 85%;
+  left: 85%;
 `;
 
 function RestCard(props) {
@@ -95,7 +95,6 @@ function RestCard(props) {
           : "expandedCardOdd"
       }
       onClick={changeState}
-      style={{ order: props.index }}
     >
       <SImg src={props.image} />
       <H1>{props.name}</H1>
