@@ -35,15 +35,15 @@ function Dashboard() {
     <Div>
       <Header />
       <Section>
-        <Route path={"/dashboard"} render={() => <TabNav />} />
-        <Route exact strict path={"/dashboard"} render={() => <Home />} />
-        <Route path={"/dashboard/passport"} render={() => <CityNav />} />
+        <Route path={"/dashboard"} component={TabNav} />
+        <Route exact strict path={"/dashboard"} component={Home} />
+        <Route path={"/dashboard/passport"} component={CityNav} />
         <Route
           path={`/dashboard/passport/austin`}
-          render={() => <RestList />}
+          component={RestList}
         />
-        <Route path={'/dashboard/passport/visit'} render={() => <RestListVisit />}/>
-        <Route path={"/dashboard/passport/NYI"} render={() => <NYI />} />
+        <Route path={'/dashboard/passport/visit'} component={RestListVisit}/>
+        <Route path={"/dashboard/passport/NYI"} component={NYI} />
       </Section>
     </Div>
   );
