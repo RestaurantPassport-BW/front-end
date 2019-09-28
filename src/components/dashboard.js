@@ -27,7 +27,7 @@ const Div = styled.div`
   height: auto;
   background-color: #f0f0f0;
   margin: 0 auto;
-
+  justify-content: center;
 `;
 
 function Dashboard() {
