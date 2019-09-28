@@ -5,11 +5,11 @@
 html,
 body {
   background-color: #f0f0f0;
+    margin: 0 auto;
 }
 
 .App {
   text-align: center;
-  
 }
 
 .navTab2{
@@ -317,11 +317,9 @@ a:hover {
 }
 .filterList {
   text-align: left;
-  margin-left: 228px;
+  margin-left: 165px;
 }
-.filter {
-  margin-left: 47px;
-}
+
 .filterLabel {
   font-family: Lato;
   font-size: 23px;
