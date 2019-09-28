@@ -17,9 +17,10 @@ function UserCard() {
     .get('https://mhagner-rest-pass.herokuapp.com/api/users/visits')
     .then(res => {
         setVisited(res.data.visits)
+       
     })
     .catch(err => console.log(err))
-}, [])
+}, [visited])
 
 
   return (
