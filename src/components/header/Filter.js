@@ -12,18 +12,18 @@ function Filter() {
             Cuisine
           </Label>
           <div className="filterList">
-            <CustomInput type="checkbox" id="Checkbox" label="Tex-Mex" />
+            <CustomInput type="radio" id="Checkbox" label="Tex-Mex" />
             <CustomInput
-              type="checkbox"
+              type="radio"
               id="Checkbox2"
               label="Authentic Mexican"
             />
-            <CustomInput type="checkbox" id="Checkbox3" label="American" />
-            <CustomInput type="checkbox" id="Checkbox4" label="Fusion" />
-            <CustomInput type="checkbox" id="Checkbox5" label="Greek" />
-            <CustomInput type="checkbox" id="Checkbox6" label="Chinese" />
-            <CustomInput type="checkbox" id="Checkbox7" label="Thai" />
-            <CustomInput type="checkbox" id="Checkbox8" label="Italian" />
+            <CustomInput type="radio" id="Checkbox3" label="American" />
+            <CustomInput type="radio" id="Checkbox4" label="Fusion" />
+            <CustomInput type="radio" id="Checkbox5" label="Greek" />
+            <CustomInput type="radio" id="Checkbox6" label="Chinese" />
+            <CustomInput type="radio" id="Checkbox7" label="Thai" />
+            <CustomInput type="radio" id="Checkbox8" label="Italian" />
           </div>
         </FormGroup>
       </Form>
