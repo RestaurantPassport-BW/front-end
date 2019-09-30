@@ -170,7 +170,7 @@ export default withFormik({
         
         localStorage.setItem("token", JSON.stringify(data.token));
         localStorage.setItem("user", data.data.user.firstName);
-        props.history.push("/dashboard");
+        props.history.push("/login");
       })
       .catch(err => {
         console.log(err);
